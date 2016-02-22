@@ -1,3 +1,36 @@
 /* ------------------------------------
     Buttons
  ------------------------------------*/
+
+.btn
+    padding: 0 ($spacing * 3)
+
+
+    transition: background .3s
+
+    letter-spacing: 1px
+    text-transform: uppercase
+
+
+    color: #fff
+    border: 0
+    background-color: $color-primary
+
+
+    @extend %input
+
+    &:hover,
+    &:focus
+        cursor: pointer
+
+        background-color: darken($color-primary, 5)
+
+
+.btn--disabled
+    background-color: $color-alto
+
+    &:hover,
+    &:focus
+        cursor: not-allowed
+
+        background-color: $color-alto

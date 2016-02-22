@@ -1,0 +1,42 @@
+/* ------------------------------------
+    Form Elements
+ ------------------------------------*/
+
+$input-height: 40px
+
+%input
+    font-family: $heading-family
+    font-size: 1.4rem
+    line-height: auto
+
+
+    display: inline-block
+
+
+    height: $input-height
+
+    margin: $spacing 0
+    padding: 0 $spacing
+
+
+    border: 1px solid $color-alto
+    border-radius: $input-height / 2
+    outline: none
+
+
+input[type='url'],
+input[type='text'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+textarea
+    @extend %input
+
+    &:active,
+    &:focus
+        border-color: $color-grey
+
+
+textarea
+    min-height: 200px
+    padding: $spacing

@@ -1,0 +1,41 @@
+/* ------------------------------------
+    Prcing
+ ------------------------------------*/
+
+.price
+    font-family: $heading-family
+
+    color: $color-mine-shaft
+
+    &--sale
+        color: $color-apple-blossom
+
+    &--crossed
+        text-decoration: line-through
+
+        color: $color-grey
+
+
+/** Pricing Table **/
+.price-table
+    font-family: $heading-family
+
+    min-width: 400px
+
+    border: 1px solid $color-alto
+
+    tr
+        &:nth-child(even)
+            background: $color-gallery
+
+        th,
+        td
+            padding: ($spacing / 3) 0
+
+            text-align: center
+
+        th
+            font-weight: 400
+
+
+            text-transform: uppercase

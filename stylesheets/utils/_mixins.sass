@@ -17,7 +17,7 @@
 
         // Check is breakpoint2 is unitless
         @if unitless($breakpoint2)
-            @warn 'Assuming '#{$breakpoint2}' to be in pixels'
+            @warn "Assuming '#{$breakpoint2}' to be in pixels"
 
     @else
         @media screen and (#{$query}-width: $breakpoint)

@@ -1,0 +1,63 @@
+/* ------------------------------------
+    Social Icons
+ ------------------------------------*/
+
+$icon-size: 35px
+
+.social-icons
+    margin: $spacing 0
+
+    li
+        display: inline-block
+
+
+        margin-right: $spacing / 2
+
+    .fa
+        font-size: 2rem
+        line-height: $icon-size
+
+
+        width: $icon-size
+        height: $icon-size
+
+
+        transition: all .3s ease-in-out
+        text-align: center
+
+
+        color: $color-grey
+
+        border: 1px solid $color-grey
+
+        border-radius: 50%
+
+        &:hover,
+        &:active
+            transform: scale(1.1)
+
+
+            color: $color-mine-shaft
+            border-color: $color-mine-shaft
+
+
+.social-icons--color
+    .fa
+        color: #fff
+
+        border: 0
+
+        &:hover,
+        &:active
+            color: #fff
+
+        &-facebook
+            background-color: #3c599f
+        &-twitter
+            background-color: #55acee
+        &-pinterest
+            background-color: #bd081c
+        &-instagram
+            background-color: #3f729b
+        &-google-plus
+            background-color: #dc4e41
