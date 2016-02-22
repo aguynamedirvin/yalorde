@@ -2,5 +2,41 @@
     Grid
  ------------------------------------*/
 
+%clearfix
+    &:after
+        content: ''
+        display: table
+        clear: both
+
+
 .wrap
+    max-width: 90%
+
+
     @include row
+
+
+.pull--right
+    float: right
+    display: inline-block
+
+.pull--left
+    float: left
+    display: inline-block
+
+
+/** Hide Elements **/
+.hide
+    display: none
+
+    &--small
+        @include mq($break-small, null, max)
+            display: none
+
+    &--medium
+        @include mq($break-medium, null, max)
+            display: none
+
+    &--large
+        @include mq($break-medium, null, min)
+            display: none

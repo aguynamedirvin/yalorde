@@ -1,9 +1,10 @@
 /* ------------------------------------
-    Prcing
+    Pricing
  ------------------------------------*/
 
 .price
     font-family: $heading-family
+
 
     color: $color-mine-shaft
 
@@ -13,6 +14,7 @@
     &--crossed
         text-decoration: line-through
 
+
         color: $color-grey
 
 
@@ -20,9 +22,13 @@
 .price-table
     font-family: $heading-family
 
-    min-width: 400px
+    min-width: 100%
 
     border: 1px solid $color-alto
+
+
+    @include mq($break-medium)
+        min-width: 400px
 
     tr
         &:nth-child(even)
@@ -31,6 +37,7 @@
         th,
         td
             padding: ($spacing / 3) 0
+
 
             text-align: center
 

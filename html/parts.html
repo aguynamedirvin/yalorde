@@ -1,5 +1,38 @@
 include "parts/header.html"
 
+
+    <div class="topbar  hide--large">
+        <div class="wrap">
+            <span class="pull--left">Call us today and take 10% off your purchase!</span>
+
+            <span class="pull--right">
+                <span class="block">Call us: <a href="tel: +19151234567">(915) 234 - 2341</a></span>
+                <span class="block">Language: <a href="#">English</a> / <a href="#">Spanish</a></span>
+            </span>
+        </div>
+    </div>
+
+    <div class="site-header">
+        <div class="wrap">
+            <div id="logo"></div>
+        </div>
+    </div>
+
+    <nav class="site-nav  nav">
+        <div class="wrap">
+            <ul>
+                <li><a class="current" href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Dresses</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Jewelry</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
     <main class="wrap">
 
         <section>
@@ -80,6 +113,20 @@ include "parts/header.html"
             </section>
 
             <section>
+                <h3>Hidding</h3>
+
+                <div class="hide--small">
+                    Should be hiddent in small screen
+                </div>
+                <div class="hide--medium">
+                    Should be hiddent in medium screen
+                </div>
+                <div class="hide--large">
+                    Should be hiddent in large screen
+                </div>
+            </section>
+
+            <section>
                 <h3>Pricing</h3>
 
                 <div class="price">
@@ -130,13 +177,16 @@ include "parts/header.html"
             <h1>Product List</h1>
 
             <div class="product">
-                <div class="product__image">
-                    <img src="" alt="" />
-                </div>
+                <figure class="product__image">
+                    <a href="#">
+                        <img src="assets/images/examples/example-1.jpg" alt="Lillian Romper" />
+                    </a>
+                </figure>
                 <div class="product__desc">
-                    <h3>Product Title</h3>
+                    <h3><a href="#">Lillian Romper</a></h3>
                     <div class="product__price">
-                        <span class="price">$49.99</span>
+                        <span class="price  price--crossed">$49.99</span>
+                        <span class="price  price--sale">$19.99</span>
                     </div>
                 </div>
             </div>

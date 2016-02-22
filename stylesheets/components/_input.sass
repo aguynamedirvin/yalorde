@@ -13,15 +13,21 @@ $input-height: 40px
     display: inline-block
 
 
+    min-width: 100%
+
     height: $input-height
 
-    margin: $spacing 0
+    margin: ($spacing / 2) 0
     padding: 0 $spacing
 
 
     border: 1px solid $color-alto
     border-radius: $input-height / 2
     outline: none
+
+
+    @include mq($break-small)
+        min-width: auto
 
 
 input[type='url'],

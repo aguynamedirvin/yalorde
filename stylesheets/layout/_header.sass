@@ -1,0 +1,48 @@
+/* ------------------------------------
+    Site Header
+ ------------------------------------*/
+
+.site-header
+    border-bottom: 1px solid $color-alto
+
+
+/** Logo **/
+#logo
+    width: 280px
+    height: 120px
+
+    margin: ($spacing * 3) 0
+
+
+    background-image: url('../images/logo.png')    // Fallback for older browsers
+    background-image: url('../images/logo.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+
+    //position: absolute
+    //@include center(x)
+
+
+/** Top bar **/
+.topbar
+    font-family: $heading-family
+    font-size: 1.1rem
+
+
+    padding: ($spacing / 2) 0
+
+
+    letter-spacing: 1px
+
+    text-transform: uppercase
+
+
+    color: #fff
+    background-color: $color-primary
+
+    a
+        color: #fff
+
+    .block
+        margin-left: $spacing
