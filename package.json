@@ -1,9 +1,9 @@
 {
-  "name": "Blueprint",
-  "version": "0.1.7",
+  "name": "Yalorde",
+  "version": "0.1",
   "author": "Irvin Dominguez",
   "license": "MIT",
-  "description": "A blueprint for your Grunt and SASSy projects",
+  "description": "Yalorde Boutique website",
   "main": "Gruntfile.js",
   "devDependencies": {
     "autoprefixer": "^6.2.1",
