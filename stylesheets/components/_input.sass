@@ -30,6 +30,15 @@ $input-height: 40px
         min-width: auto
 
 
+    &:disabled
+        background-color: $color-alto
+
+        &:hover,
+        &:focus
+            cursor: not-allowed
+            background-color: $color-alto
+
+
 input[type='url'],
 input[type='text'],
 input[type='email'],
@@ -41,6 +50,9 @@ textarea
     &:active,
     &:focus
         border-color: $color-grey
+
+    &:disabled
+        @extend %input-disabled
 
 
 textarea
