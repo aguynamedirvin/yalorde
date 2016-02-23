@@ -15,9 +15,13 @@
     display: inline-block
     overflow: hidden
 
-    height: 350px
+    height: 225px
 
     background: #f4f4f4
+
+    @include mq($break-medium)
+        height: 350px
+
 
     &--lg
         width: 100%

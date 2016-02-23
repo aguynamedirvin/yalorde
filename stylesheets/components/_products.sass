@@ -2,31 +2,37 @@
     Products
  ------------------------------------*/
 
+.product__list
+    @include row
+
 .product
     width: 100%
+    margin-bottom: $spacing
 
     @include mq($break-small)
         @include col(1/2)
 
     @include mq($break-medium)
-        @include col(3/12)
-    
+        @include col(1/4)
+
     &__image
         margin: 0
-        transition: opacity .3s 
-        
+
+        transition: opacity .3s
+
         &:hover
             opacity: 0.75
-    
+
     &__desc
         text-align: center
-    
+
     &__title
-        font-size: 1.4rem
         margin-bottom: $spacing / 2
-        
+
+        font-size: 1.4rem
+
         a
             color: $color-mine-shaft
-            
+
             &:hover
                 color: $color-primary
