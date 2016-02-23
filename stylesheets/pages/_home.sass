@@ -1,0 +1,62 @@
+/* ------------------------------------
+    Site Header
+ ------------------------------------*/
+
+.promos
+    max-width: 1600px
+    margin: $spacing auto
+
+    @extend %clearfix
+
+
+.promo
+    position: relative
+
+    display: inline-block
+    overflow: hidden
+
+    height: 350px
+
+    background: #f4f4f4
+
+    &--lg
+        width: 100%
+
+        @include mq($break-medium)
+            @include col(7/12, false)
+
+    &--sm
+        width: 100%
+
+        @include mq($break-medium)
+            @include col(5/12, false)
+
+
+    &__meta
+        position: absolute
+
+        width: 100%
+
+        text-align: center
+
+        @include center(y)
+
+    h2
+        letter-spacing: 3px
+
+        color: #fff
+
+        font-size: 4.5rem
+
+    img
+        display: block
+
+        max-width: 100%
+        height: auto
+        margin: 0 auto
+
+        transition: all 3000ms ease
+        vertical-align: middle
+
+    &:hover img
+        transform: scale(1.1)

@@ -1,17 +1,28 @@
-input[type='search'],
-.search
-    background-image: url('../images/search.png')
-    background-image: url('../images/search.svg')
-    background-repeat: no-repeat
-    background-position: $spacing center
-    
-    transition: width .3s 
-    
-    padding-left: 50px
+/** Top bar **/
+.topbar,
+.site-info
+    font-family: $heading-family
+    font-size: 1.1rem
 
-    &:focus
-        width: 350px
 
+    padding: ($spacing / 2) 0
+
+
+    letter-spacing: 1px
+
+    text-transform: uppercase
+
+
+    color: #fff
+    background-color: $color-primary
+
+    a
+        color: #fff
+        border-bottom: 1px solid #fff
+
+    .block
+        margin-left: $spacing
+        
 
 /** Heart **/
 .heart
