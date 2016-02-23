@@ -1,0 +1,33 @@
+/* ------------------------------------
+    CSS Animations
+ ------------------------------------*/
+
+/*!  Animate.css - http://daneden.me/animate
+    Version - 3.4.0
+    Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+    Copyright (c) 2015 Daniel Eden */
+
+
+.animated 
+    animation-duration: 1s
+    animation-fill-mode: both
+
+    &.infinite 
+        animation-iteration-count: infinite
+
+
+// Pulse
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes pulse
+    from
+        transform: scale3d(1, 1, 1)
+
+    50%
+        transform: scale3d(1.15, 1.15, 1.15)
+
+    to
+        transform: scale3d(1, 1, 1)
+
+.pulse
+    animation-name: pulse

@@ -1,0 +1,40 @@
+/* ------------------------------------
+    Site Footer
+ ------------------------------------*/
+ 
+.site-footer
+    padding: ($spacing * 3) 0
+    background-color: $color-gallery
+    
+.footer__widget
+    @include col(1/3)
+    font-family: $heading-family
+    
+    h3
+        font-size: 1.8rem
+        
+        &:after
+            margin-top: $spacing / 2
+            content: ' '
+            display: block
+            background-color: $color-primary
+            height: 2px
+            width: 50px
+            
+            
+.site-info
+    background-color: $color-primary
+    color: #fff
+    font-family: $heading-family
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-size: 1.1rem
+    padding: ($spacing / 2) 0
+    
+    a
+        color: #fff
+        border-bottom: 1px solid #fff
+        
+        &:hover
+            color: #fff
+            

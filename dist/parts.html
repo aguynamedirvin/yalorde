@@ -63,15 +63,21 @@
         <section>
 
             <h1>Form Elements</h1>
+            
+            <h3>Buttons</h3>
 
             <button class="btn">Primary</button>
             <button class="btn  btn--disabled">Disabled</button>
+            
+            <h3>Inputs</h3>
 
             <input type="text" placeholder="Text" />
             <input type="email" placeholder="email@email.com" />
             <input type="password" placeholder="password" />
             <input type="search" placeholder="Search..." />
             <input type="text" disabled placeholder="Disabled"  />
+            
+            <input class="search" type="search" placeholder="Search..." />
 
             <br />
 
@@ -127,7 +133,7 @@
             </section>
 
             <section>
-                <h3>Colors</h3>
+                <h3>Color Pallete</h3>
                 <ul>
                     <li class="color">Primary</li>
                     <li class="color  color--apple-blossom">Apple Blossom</li>
@@ -209,7 +215,49 @@
                     </a>
                 </figure>
                 <div class="product__desc">
-                    <h3><a href="#">Lillian Romper</a></h3>
+                    <h3 class="product__title"><a href="#">Lillian Romper</a></h3>
+                    <div class="product__price">
+                        <span class="price  price--crossed">$49.99</span>
+                        <span class="price  price--sale">$19.99</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <figure class="product__image">
+                    <a href="#">
+                        <img src="assets/images/examples/example-1.jpg" alt="Lillian Romper" />
+                    </a>
+                </figure>
+                <div class="product__desc">
+                    <h3 class="product__title"><a href="#">Lillian Romper</a></h3>
+                    <div class="product__price">
+                        <span class="price  price--crossed">$49.99</span>
+                        <span class="price  price--sale">$19.99</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <figure class="product__image">
+                    <a href="#">
+                        <img src="assets/images/examples/example-1.jpg" alt="Lillian Romper" />
+                    </a>
+                </figure>
+                <div class="product__desc">
+                    <h3 class="product__title"><a href="#">Lillian Romper</a></h3>
+                    <div class="product__price">
+                        <span class="price  price--crossed">$49.99</span>
+                        <span class="price  price--sale">$19.99</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <figure class="product__image">
+                    <a href="#">
+                        <img src="assets/images/examples/example-1.jpg" alt="Lillian Romper" />
+                    </a>
+                </figure>
+                <div class="product__desc">
+                    <h3 class="product__title"><a href="#">Lillian Romper</a></h3>
                     <div class="product__price">
                         <span class="price  price--crossed">$49.99</span>
                         <span class="price  price--sale">$19.99</span>
@@ -220,6 +268,50 @@
         </section>
 
     </main>
+
+        <footer class="site-footer">
+            <div class="wrap">
+                <div class="footer__widget">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>1234 Main St. El Paso TX 79938</li>
+                        <li>(915) 234 - 2345</li>
+                        <li>contact@yalorde.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer__widget">
+                    <h3>Follow us</h3>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa  fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa  fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa  fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa  fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__widget">
+                    <h3>Quick links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+        <div class="site-info">
+            <div class="wrap">
+                <div class="pull--left">
+                    Crafted with <span class="heart animated infinite pulse">love</span> by <a href="http://squarepixl.com/">SquarePixl</a>.
+                </div>
+                <div class="pull--right">
+                    © 2015 Yalorde. All Rights Reserved.
+                </div>
+            </div>
+        </div>
 
     </body>
 </html>

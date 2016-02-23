@@ -1,3 +1,40 @@
+input[type='search'],
+.search
+    background-image: url('../images/search.png')
+    background-image: url('../images/search.svg')
+    background-repeat: no-repeat
+    background-position: $spacing center
+    
+    transition: width .3s 
+    
+    padding-left: 50px
+
+    &:focus
+        width: 350px
+
+
+/** Heart **/
+.heart
+    display: inline-block
+    height: 1.2rem
+    margin: 0 2px
+    position: relative
+    width: 15px
+    overflow: hidden
+    text-indent: 100%
+    white-space: nowrap
+
+    &:before
+        overflow: show
+        text-indent: 0
+
+        content: "\f004"
+        font-family: "FontAwesome"
+        left: 0
+        position: absolute
+        top: -2px
+
+
 /** This is for testing only. To be removed for production **/
 .color
     width: 100px

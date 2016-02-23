@@ -1,0 +1,32 @@
+/* ------------------------------------
+    Products
+ ------------------------------------*/
+
+.product
+    width: 100%
+
+    @include mq($break-small)
+        @include col(1/2)
+
+    @include mq($break-medium)
+        @include col(3/12)
+    
+    &__image
+        margin: 0
+        transition: opacity .3s 
+        
+        &:hover
+            opacity: 0.75
+    
+    &__desc
+        text-align: center
+    
+    &__title
+        font-size: 1.4rem
+        margin-bottom: $spacing / 2
+        
+        a
+            color: $color-mine-shaft
+            
+            &:hover
+                color: $color-primary

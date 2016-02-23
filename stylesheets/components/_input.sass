@@ -13,7 +13,7 @@ $input-height: 40px
     display: inline-block
 
 
-    min-width: 100%
+    width: 100%
 
     height: $input-height
 
@@ -27,7 +27,7 @@ $input-height: 40px
 
 
     @include mq($break-small)
-        min-width: auto
+        width: auto
 
 
     &:disabled
@@ -56,5 +56,6 @@ textarea
 
 
 textarea
+    min-width: 250px
     min-height: 200px
     padding: $spacing
