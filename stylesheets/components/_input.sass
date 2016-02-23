@@ -9,9 +9,7 @@ $input-height: 40px
     font-size: 1.4rem
     line-height: auto
 
-
     display: inline-block
-
 
     width: 100%
 
@@ -20,15 +18,12 @@ $input-height: 40px
     margin: ($spacing / 2) 0
     padding: 0 $spacing
 
-
     border: 1px solid $color-alto
     border-radius: $input-height / 2
     outline: none
 
-
     @include mq($break-small)
         width: auto
-
 
     &:disabled
         background-color: $color-alto
@@ -47,12 +42,28 @@ input[type='password'],
 textarea
     @extend %input
 
-    &:active,
     &:focus
         border-color: $color-grey
 
     &:disabled
         @extend %input-disabled
+
+
+input[type='search']
+    padding-left: 35px
+
+    width: 15rem
+
+    transition: width .3s
+
+    background-image: url('../images/search.png')
+    background-image: url('../images/search.svg')
+    background-repeat: no-repeat
+    background-position: $spacing center
+
+    &:focus,
+    &:active
+        width: 30rem
 
 
 textarea
