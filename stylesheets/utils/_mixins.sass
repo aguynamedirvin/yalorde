@@ -10,14 +10,19 @@
     // Check is breakpoint is unitless
     @if unitless($breakpoint)
         @warn "Assuming '#{$breakpoint}' to be in pixels"
+        $breakpoint: $breakpoint + 'px'
 
     @if $breakpoint2 != null
-        @media screen and (min-width: #{$breakpoint}) and (max-width: #{$breakpoint2})
-            @content
-
         // Check is breakpoint2 is unitless
         @if unitless($breakpoint2)
             @warn "Assuming '#{$breakpoint2}' to be in pixels"
+            $breakpoint2: $breakpoint2 + 'px'
+            
+            
+        @media screen and (min-width: #{$breakpoint}) and (max-width: #{$breakpoint2})
+            @content
+
+        
 
     @else
         @media screen and (#{$query}-width: $breakpoint)

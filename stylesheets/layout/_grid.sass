@@ -56,3 +56,9 @@ $breakpoints: (sm: 375px,    md: 668px,    lg: 960px)
     &--large
         @include mq($break-medium, null, min)
             display: none
+
+
+@each $bp, $size in $breakpoints
+    @include mq($size)
+        .hide\@#{$bp}
+            display: none

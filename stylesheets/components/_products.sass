@@ -2,10 +2,47 @@
     Products
  ------------------------------------*/
 
+.product-single
+    @extend %clearfix
+    
+    .product
+        // Containers
+        &__images
+            @include mq($break-medium)
+                @include col(6.5/12)
+            
+        &__image
+            @include mq($break-medium)
+                @include col(9/12)
+        
+        &__thumbnails
+            @include mq($break-medium)
+                @include col(3/12)
+            
+        &__details
+            @include col(4.5/12)
+            
+        &__section
+            margin-bottom: $spacing * 5
+            
+            h3
+                font-size: 1.8rem
+        
+        
+                
+        &__price
+            font-size: 3.7rem
+            
+        &__anticipation
+            color: $color-apple-blossom
+
+
+
 .product__list
     @include row
+    
 
-.product
+.product-item
     width: 100%
     margin-bottom: $spacing
 
@@ -14,25 +51,25 @@
 
     @include mq($break-medium)
         @include col(1/4)
-
-    &__image
-        margin: 0
-
-        transition: opacity .3s
-
-        &:hover
-            opacity: 0.75
-
-    &__desc
-        text-align: center
-
-    &__title
-        margin-bottom: $spacing / 2
-
-        font-size: 1.4rem
-
-        a
-            color: $color-mine-shaft
+        
+        
+    .product
+        &__image
+            margin: 0
+    
+            transition: opacity .3s
+    
+            &:hover
+                opacity: 0.75
+            
+        &__meta
+            text-align: center
+            
+        &__title
+            font-size: 1.4rem
+            
+            a
+                color: $color-mine-shaft
 
             &:hover
                 color: $color-primary
