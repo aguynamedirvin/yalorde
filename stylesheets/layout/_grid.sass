@@ -13,6 +13,7 @@
 .wrap
     max-width: 90%
     margin: 0 auto
+    @extend %clearfix
 
     @include mq($break-medium)
         @include row
@@ -25,6 +26,19 @@
 .pull--left
     display: inline-block
     float: left
+
+
+$breakpoints: (sm: 375px,    md: 668px,    lg: 960px)
+
+@each $bp, $size in $breakpoints
+    @include mq($size)
+        .pull--right\@#{$bp}
+            display: inline-block
+            float: right
+
+        .pull--left\@#{$bp}
+            display: inline-block
+            float: left
 
 
 /** Hide Elements **/
