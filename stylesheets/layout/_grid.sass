@@ -42,7 +42,7 @@ $breakpoints: (sm: 375px,    md: 668px,    lg: 960px)
 
 
 /** Hide Elements **/
-.hide
+//.hide
     display: none
 
     &--small
@@ -58,7 +58,17 @@ $breakpoints: (sm: 375px,    md: 668px,    lg: 960px)
             display: none
 
 
-@each $bp, $size in $breakpoints
-    @include mq($size)
+@mixin all-sizes($class)
+    @each $bp, $size in $breakpoints
+        @include mq($size, null, max)
+            #{$class}\@#{$bp}
+                @content
+
+@include all-sizes('.hide')
+    display: none
+
+
+//@each $bp, $size in $breakpoints
+    @include mq($size, null, max)
         .hide\@#{$bp}
             display: none
