@@ -2,45 +2,57 @@
     Products
  ------------------------------------*/
 
+// Single Product Styles
 .product-single
     @extend %clearfix
-    
+
     .product
         // Containers
         &__images
+            margin-top: 0
+            margin-bottom: 0
+
+
             @include mq($break-medium)
                 @include col(6.5/12)
-            
+
         &__image
             @include mq($break-medium)
                 @include col(9/12)
-        
+
         &__thumbnails
             @include mq($break-medium)
                 @include col(3/12)
-            
+
         &__details
             @include col(4.5/12)
-            
+
         &__section
-            margin-bottom: $spacing * 5
-            
+            margin-bottom: $spacing * 3
+
             h3
-                font-size: 1.8rem
-        
-        
-                
+                font-size: 1.6rem
+
+
+        &__title
+            margin: ($spacing / 2) 0
+
+            font-size: 4.5rem
+
         &__price
             font-size: 3.7rem
-            
+
         &__anticipation
             color: $color-apple-blossom
 
+    .price-table
+        width: 100%
 
 
+// Product List
 .product__list
     @include row
-    
+
 
 .product-item
     width: 100%
@@ -51,23 +63,22 @@
 
     @include mq($break-medium)
         @include col(1/4)
-        
-        
+
+
     .product
         &__image
             margin: 0
-    
             transition: opacity .3s
-    
+
             &:hover
                 opacity: 0.75
-            
+
         &__meta
             text-align: center
-            
+
         &__title
             font-size: 1.4rem
-            
+
             a
                 color: $color-mine-shaft
 

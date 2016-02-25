@@ -3,7 +3,7 @@
 //  --------------------------------------------------------------
 
 //  --------------------------------------------------------------
-//  Breakpoints v0.1.1
+//  Breakpoints v0.1.2
 //  --------------------------------------------------------------
 @mixin mq($breakpoint, $breakpoint2: null, $query: min)
 
@@ -17,12 +17,9 @@
         @if unitless($breakpoint2)
             @warn "Assuming '#{$breakpoint2}' to be in pixels"
             $breakpoint2: $breakpoint2 + 'px'
-            
-            
+
         @media screen and (min-width: #{$breakpoint}) and (max-width: #{$breakpoint2})
             @content
-
-        
 
     @else
         @media screen and (#{$query}-width: $breakpoint)

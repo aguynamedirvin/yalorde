@@ -3,25 +3,37 @@ include "parts/header.html"
     <main class="wrap">
 
         <article class="product  product-single">
-            
-            <figure class="product__images"></figure>
-            
+
+            <figure class="product__images">
+                <div class="product__image">
+                    <img src="assets/images/examples/example-1.jpg" alt="XIV Dress" />
+                </div>
+
+                <div class="product__thumbnails">
+                    <img src="assets/images/examples/example-1.jpg" alt="XIV Dress" />
+                    <img src="assets/images/examples/example-2.jpg" alt="XIV Dress" />
+                    <img src="assets/images/examples/example-3.jpg" alt="XIV Dress" />
+
+                </div>
+            </figure>
+
             <div class="product__details">
                 <header class="product__section">
                     <ul class="nav  breadcrumbs">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Dresses</a></li>
                         <li><a href="#">XIV</a></li>
-                        <li><a href="#">Blue Dress</a></li>
+                        <li><a class="current" href="#">Blue Dress</a></li>
                     </ul>
-                    
+
                     <h1 class="product__title">XVI Dress</h1>
-                    
+
                     <div class="product__price">
-                        <span class="price">$499.00</span>
+                        <span class="price  price--sale">$499.00</span>
+                        <span class="price  price--crossed">$499.00</span>
                     </div>
                 </header>
-                
+
                 <div class="product__section  product__social-share">
                     <h3>Share with your friends</h3>
                     <ul class="social-icons social-icons--color">
@@ -31,7 +43,7 @@ include "parts/header.html"
                         <li><a href="#"><i class="fa  fa-instagram"></i></a></li>
                     </ul>
                 </div>
-                
+
                 <div class="product__section  product__pricing">
                     <h3>More than one?</h3>
                     <table class="price-table">
@@ -67,26 +79,26 @@ include "parts/header.html"
                         </tr>
                     </table>
                 </div>
-                
+
                 <div class="product__section  product__info">
                     <h3>Info</h3>
                     <ul>
                         <li>Style: 9435798-10</li>
                         <li>Categories: <a href="">Dress</a>, <a href="#">XIV</a></li>
                         <li>Tags: <a href="">Dress</a>, <a href="#">Women</a>, <a href="#">Formal</a></li>
-                        <li>*Please allow a 3 month anticipation to ensure we have it in stock.</li>
+                        <li class="product__anticipation">*Please allow a 3 month anticipation to ensure we have it in stock.</li>
                     </ul>
                 </div>
             </div>
-            
+
         </article>
-        
-        
+
+
         <div class="product__list">
             <h3>You might also like</h3>
             include "parts/product.products.html"
         </div>
-    
+
     </main>
 
 
