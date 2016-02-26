@@ -11,12 +11,14 @@
 
 
 .wrap
-    max-width: 90%
-    margin: 0 auto
     @extend %clearfix
 
     @include mq($break-medium)
         @include row
+
+    @include mq($break-medium, null, max)
+        max-width: 90%
+        margin: 0 auto
 
 
 .pull--right

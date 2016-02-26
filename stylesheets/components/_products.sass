@@ -7,16 +7,16 @@
     @extend %clearfix
 
     .product
-        // Containers
+
+        // Product image slider
         &__images
-            margin-top: 0
-            margin-bottom: 0
+            margin: 0
 
 
             @include mq($break-medium)
                 @include col(6.5/12)
 
-        &__image
+        &__slider
             @include mq($break-medium)
                 @include col(9/12)
 
@@ -24,16 +24,27 @@
             @include mq($break-medium)
                 @include col(3/12)
 
-        &__details
-            @include col(4.5/12)
+            img
+                outline: none
 
+                &.slick-current
+                    opacity: .8
+
+
+        // Product details
+        &__details
+            @include mq($break-medium)
+                @include col(4.5/12)
+
+
+        // Sections
         &__section
             margin-bottom: $spacing * 3
 
             h3
                 font-size: 1.6rem
 
-
+        // Product title & price
         &__title
             margin: ($spacing / 2) 0
 
@@ -42,9 +53,12 @@
         &__price
             font-size: 3.7rem
 
+
+        // Anticipation message
         &__anticipation
             color: $color-apple-blossom
 
+    // Pice table
     .price-table
         width: 100%
 
@@ -52,6 +66,7 @@
 // Product List
 .product__list
     @include row
+    width: 100%
 
 
 .product-item
