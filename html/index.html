@@ -1,0 +1,131 @@
+include "parts/header.html"
+
+
+    <section class="promos">
+
+        <a href="#">
+            <div class="promo  promo--lg">
+                <img src="assets/images/examples/dresses.jpg" alt="Dresses" />
+                <div class="promo__meta">
+                    <h2>Dresses</h2>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="promo  promo--sm">
+                <img src="assets/images/examples/shoes.jpg" alt="Shoes" />
+                <div class="promo__meta">
+                    <h2>Shoes</h2>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="promo  promo--sm">
+                <img src="assets/images/examples/acessories.jpg" alt="Acessories" />
+                <div class="promo__meta">
+                    <h2>Acessories</h2>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="promo  promo--lg">
+                <img src="assets/images/examples/collections.jpg" alt="Collections" />
+                <div class="promo__meta">
+                    <h2>Collections</h2>
+                </div>
+            </div>
+        </a>
+
+    </section>
+    
+    
+
+    <main class="wrap">
+        
+        <!-- New Arrivals -->
+        <section class="section">
+
+            <h1 class="section__title">New Arrivals</h1>
+
+            <div class="product__list">
+                include "parts/product.products.html"
+            </div>
+            
+            <button class="btn">Shop</button>
+
+        </section>
+        
+        
+        
+        <!-- Collections -->
+        <section class="section">
+
+            <h1 class="section__title">Collections</h1>
+
+            <div class="product__list">
+                include "parts/product.products.html"
+            </div>
+            
+            <button class="btn">Shop Collections</button>
+
+        </section>
+        
+        
+        
+        <!-- Product Categories -->
+        <section class="section">
+            <div class="product-cat">
+                <h3>Dresses</h3>
+                <ul class="product__list  product__list--vertical">
+                    <li class="product  product-item--vertical">
+                        <figure class="product__image">
+                            <a href="#">
+                                <img src="assets/images/examples/example-1.jpg" alt="XVI Dress" />
+                            </a>
+                        </figure>
+                        <div class="product__meta">
+                            <h3 class="product__title"><a href="#">XVI Dress</a></h3>
+                            <div class="product__price">
+                                <span class="price">$19.99</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product  product-item--vertical">
+                        <figure class="product__image">
+                            <a href="#">
+                                <img src="assets/images/examples/example-1.jpg" alt="XVI Dress" />
+                            </a>
+                        </figure>
+                        <div class="product__meta">
+                            <h3 class="product__title"><a href="#">XVI Dress</a></h3>
+                            <div class="product__price">
+                                <span class="price  price--sale">$19.99</span>
+                                <span class="price  price--crossed">$49.99</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product  product-item--vertical">
+                        <figure class="product__image">
+                            <a href="#">
+                                <img src="assets/images/examples/example-1.jpg" alt="XVI Dress" />
+                            </a>
+                        </figure>
+                        <div class="product__meta">
+                            <h3 class="product__title"><a href="#">XVI Dress</a></h3>
+                            <div class="product__price">
+                                <span class="price">$19.99</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#">Shop dresses</a>
+            </div>
+
+        </section>
+        
+    </main>
+
+include "parts/footer.html"
