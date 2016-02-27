@@ -20,62 +20,53 @@
         max-width: 90%
         margin: 0 auto
 
+
 main
     $margin: $spacing * 4
-    
+
     margin-top: $margin
     margin-bottom: $margin
-
-.pull--right
-    display: inline-block
-    float: right
-
-.pull--left
-    display: inline-block
-    float: left
 
 
 $breakpoints: (sm: 375px,    md: 668px,    lg: 960px)
 
-@each $bp, $size in $breakpoints
-    @include mq($size)
-        .pull--right\@#{$bp}
-            display: inline-block
-            float: right
 
-        .pull--left\@#{$bp}
-            display: inline-block
-            float: left
+$test: index(uno dos tress, dos)
+$test: index((width: 10px, height: 20px), (height 20px))
 
+@if $test == null
+    $test: 'Null'
 
-/** Hide Elements **/
-//.hide
-    display: none
-
-    &--small
-        @include mq($break-small, null, max)
-            display: none
-
-    &--medium
-        @include mq($break-medium, null, max)
-            display: none
-
-    &--large
-        @include mq($break-medium, null, min)
-            display: none
-
+.test
+    content: '#{$test}'
 
 @mixin all-sizes($class)
-    @each $bp, $size in $breakpoints
-        @include mq($size, null, max)
-            #{$class}\@#{$bp}
-                @content
+        #{$class}
+            @content
 
+        @each $bp, $size in $breakpoints
+            //$test: index($breakpoints, ($bp $size))
+
+
+            @include mq($size, null, max)
+                #{$class}\@#{$bp}
+                    @content
+
+
+/** Alignment **/
+@include all-sizes('.pull--right')
+    display: inline-block
+    float: right
+
+@include all-sizes('.pull--left')
+    display: inline-block
+    float: left
+
+@include all-sizes('.center')
+    display: block
+    margin: 0 auto
+
+
+/** Hide elements **/
 @include all-sizes('.hide')
     display: none
-
-
-//@each $bp, $size in $breakpoints
-    @include mq($size, null, max)
-        .hide\@#{$bp}
-            display: none

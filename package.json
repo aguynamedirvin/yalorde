@@ -1,6 +1,7 @@
 {
   "name": "Yalorde",
-  "version": "0.1",
+  "version": "0.1.0",
+  "private": true,
   "author": "Irvin Dominguez",
   "license": "MIT",
   "description": "Yalorde Boutique website",
