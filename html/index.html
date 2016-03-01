@@ -43,87 +43,149 @@ include "parts/header.html"
 
 
 
-    <main class="wrap">
+    <main>
 
         <!-- New Arrivals -->
         <section class="section">
+            <div class="wrap">
 
-            <h1 class="section__title">New Arrivals</h1>
+                <h1 class="section__title">New Arrivals</h1>
 
-            <div class="product__list">
-                include "parts/product.products.html"
+                <div class="product__list">
+                    include "parts/product.products.html"
+                </div>
+
+                <button class="btn">Shop</button>
+
             </div>
-
-            <button class="btn">Shop</button>
-
         </section>
 
 
 
         <!-- Collections -->
         <section class="section">
+            <div class="wrap">
 
-            <h1 class="section__title">Collections</h1>
+                <h1 class="section__title">Collections</h1>
 
-            <div class="product__list">
-                include "parts/product.products.html"
+                <div class="product__list">
+                    include "parts/product.products.html"
+                </div>
+
+                <button class="btn">Shop Collections</button>
+
             </div>
-
-            <button class="btn">Shop Collections</button>
-
         </section>
 
 
 
         <!-- Product Categories -->
-        <section class="section">
-            <div class="product-cat">
-                <h3>Dresses</h3>
-                <ul class="product__list  product__list--vertical">
-                    <li class="product  product-item--vertical">
-                        <figure class="product__image">
-                            <a href="product.html">
-                                <img src="assets/images/examples/example-1.jpg" alt="XVI Dress" />
-                            </a>
-                        </figure>
-                        <div class="product__meta">
-                            <h3 class="product__title"><a href="product.html">XVI Dress</a></h3>
-                            <div class="product__price">
-                                <span class="price">$19.99</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="product  product-item--vertical">
-                        <figure class="product__image">
-                            <a href="product.html">
-                                <img src="assets/images/examples/example-1.jpg" alt="XVI Dress" />
-                            </a>
-                        </figure>
-                        <div class="product__meta">
-                            <h3 class="product__title"><a href="product.html">XVI Dress</a></h3>
-                            <div class="product__price">
-                                <span class="price  price--sale">$19.99</span>
-                                <span class="price  price--crossed">$49.99</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="product  product-item--vertical">
-                        <figure class="product__image">
-                            <a href="product.html">
-                                <img src="assets/images/examples/example-1.jpg" alt="XVI Dress" />
-                            </a>
-                        </figure>
-                        <div class="product__meta">
-                            <h3 class="product__title"><a href="product.html">XVI Dress</a></h3>
-                            <div class="product__price">
-                                <span class="price">$19.99</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <a href="#">Shop dresses</a>
-            </div>
+        <section class="section  section__product-cats">
+            <div class="wrap">
 
+                <div class="product-cat">
+                    <h3>Dresses</h3>
+                    <ul class="product__list  product__list--vertical">
+                        <li class="product  product-item--vertical">
+                            <figure class="product__image">
+                                <a href="product.html">
+                                    <img src="assets/images/examples/example-1.jpg" alt="XVI Dress" />
+                                </a>
+                            </figure>
+                            <div class="product__meta">
+                                <h3 class="product__title"><a href="product.html">XVI Dress</a></h3>
+                                <div class="product__price">
+                                    <span class="price">$19.99</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product  product-item--vertical">
+                            <figure class="product__image">
+                                <a href="product.html">
+                                    <img src="assets/images/examples/example-1.jpg" alt="XVI Dress" />
+                                </a>
+                            </figure>
+                            <div class="product__meta">
+                                <h3 class="product__title"><a href="product.html">XVI Dress</a></h3>
+                                <div class="product__price">
+                                    <span class="price  price--sale">$19.99</span>
+                                    <span class="price  price--crossed">$49.99</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="section__view-more" href="#">Shop dresses</a>
+                </div>
+
+                <div class="product-cat">
+                    <h3>Jewelry</h3>
+                    <ul class="product__list  product__list--vertical">
+                        <li class="product  product-item--vertical">
+                            <figure class="product__image">
+                                <a href="product.html">
+                                    <img src="assets/images/examples/example-1.jpg" alt="XVI Dress" />
+                                </a>
+                            </figure>
+                            <div class="product__meta">
+                                <h3 class="product__title"><a href="product.html">XVI Dress</a></h3>
+                                <div class="product__price">
+                                    <span class="price">$19.99</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product  product-item--vertical">
+                            <figure class="product__image">
+                                <a href="product.html">
+                                    <img src="assets/images/examples/example-1.jpg" alt="XVI Dress" />
+                                </a>
+                            </figure>
+                            <div class="product__meta">
+                                <h3 class="product__title"><a href="product.html">XVI Dress</a></h3>
+                                <div class="product__price">
+                                    <span class="price  price--sale">$19.99</span>
+                                    <span class="price  price--crossed">$49.99</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="section__view-more" href="#">Shop jewelry</a>
+                </div>
+
+                <div class="product-cat">
+                    <h3>Acessories</h3>
+                    <ul class="product__list  product__list--vertical">
+                        <li class="product  product-item--vertical">
+                            <figure class="product__image">
+                                <a href="product.html">
+                                    <img src="assets/images/examples/example-1.jpg" alt="XVI Dress" />
+                                </a>
+                            </figure>
+                            <div class="product__meta">
+                                <h3 class="product__title"><a href="product.html">XVI Dress</a></h3>
+                                <div class="product__price">
+                                    <span class="price">$19.99</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product  product-item--vertical">
+                            <figure class="product__image">
+                                <a href="product.html">
+                                    <img src="assets/images/examples/example-1.jpg" alt="XVI Dress" />
+                                </a>
+                            </figure>
+                            <div class="product__meta">
+                                <h3 class="product__title"><a href="product.html">XVI Dress</a></h3>
+                                <div class="product__price">
+                                    <span class="price  price--sale">$19.99</span>
+                                    <span class="price  price--crossed">$49.99</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="section__view-more" href="#">Shop acessories</a>
+                </div>
+
+            </div>
         </section>
 
     </main>

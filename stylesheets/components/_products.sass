@@ -2,6 +2,25 @@
     Products
  ------------------------------------*/
 
+.product
+    &__image
+        margin: 0
+        padding: 0
+        transition: opacity .3s
+
+        &:hover
+            opacity: .75
+
+    &__title
+        font-size: 1.4rem
+
+        a
+            color: $color-mine-shaft
+
+        &:hover
+            color: $color-primary
+
+
 // Single Product Styles
 .product-single
     @extend %clearfix
@@ -27,7 +46,7 @@
             img
                 outline: none
                 margin-bottom: $spacing
-                
+
                 @include mq($break-big, null, max)
                     max-width: 33.30%
 
@@ -71,7 +90,7 @@
 .product__list
     @include row
     width: 100%
-    
+
     .product
         &__image
             margin: 0
@@ -82,12 +101,6 @@
 
         &__title
             font-size: 1.4rem
-
-            a
-                color: $color-mine-shaft
-
-            &:hover
-                color: $color-primary
 
 
 .product-item
@@ -102,25 +115,8 @@
 
 
     .product
-        &__image
-            margin: 0
-            transition: opacity .3s
-
-            &:hover
-                opacity: .75
-
         &__meta
             text-align: center
-
-        &__title
-            font-size: 1.4rem
-
-            a
-                color: $color-mine-shaft
-
-            &:hover
-                color: $color-primary
-
 
 
 
@@ -128,21 +124,22 @@
     @include mq($break-medium)
         @include col(1/3)
 
+    h3
+        font-size: 1.8rem
+
 .product-item--vertical
     @extend %clearfix
-    margin-bottom: $spacing * 2
-    
+    margin-bottom: $spacing
+
     .product
         &__image
-            @include col(4/12)
-            height: 100px
+            @include col(4/12, false)
+            height: 120px
             overflow: hidden
-                
+
         &__meta
             @include col(8/12)
-            
+
         &__title
-            font-size: 2.2rem
             margin-top: 0
             margin-bottom: $spacing / 2
-                

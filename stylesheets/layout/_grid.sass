@@ -30,24 +30,11 @@ main
 
 $breakpoints: (sm: 375px,    md: 668px,    lg: 960px)
 
-
-$test: index(uno dos tress, dos)
-$test: index((width: 10px, height: 20px), (height 20px))
-
-@if $test == null
-    $test: 'Null'
-
-.test
-    content: '#{$test}'
-
 @mixin all-sizes($class)
         #{$class}
             @content
 
         @each $bp, $size in $breakpoints
-            //$test: index($breakpoints, ($bp $size))
-
-
             @include mq($size, null, max)
                 #{$class}\@#{$bp}
                     @content
