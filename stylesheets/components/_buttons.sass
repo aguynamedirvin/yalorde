@@ -5,6 +5,8 @@
 .btn,
 button,
 input[type='button']
+    @extend %input
+    
     padding: 0 ($spacing * 3)
 
     transition: background .3s
@@ -16,10 +18,9 @@ input[type='button']
     border: 0
     background-color: $color-primary
 
-    @extend %input
-
     &:hover,
     &:focus
+        color: #fff
         cursor: pointer
 
         background-color: darken($color-primary, 5)
