@@ -1,0 +1,76 @@
+/* ------------------------------------
+    Contact Page
+ ------------------------------------*/
+
+$padding: $spacing * 4
+
+.contact
+    max-width: 800px
+    margin: 0 auto
+
+    &__form,
+    &__info
+        @include mq($break-medium)
+            @include col(1/2)
+
+            padding: $padding 0
+
+    &__form
+        @include mq($break-medium)
+            border-right: 1px solid $color-alto
+            padding-right: $padding
+
+        input,
+        textarea
+            min-width: 100%
+
+    &__info
+        font-family: $heading-family
+        margin-top: $spacing * 4
+
+        @include mq($break-medium)
+            margin: 0
+            padding-left: $padding
+
+    &__method
+        padding-left: 75px
+        position: relative
+        margin-bottom: $spacing * 3
+        min-height: 70px
+
+        h3
+            font-size: 1.8rem
+            margin: 0 0 ($spacing / 2)
+
+        &:before
+            content: ' '
+            display: inline-block
+            width: 42px
+            height: 42px
+            position: absolute
+            left: 0
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+
+        &--phone
+            &:before
+                height: 38px
+                background-image: url('../images/phone.png')
+                background-image: url('../images/phone.svg')
+
+        &--location
+            &:before
+                background-image: url('../images/store.png')
+                background-image: url('../images/store.svg')
+
+        &--operation
+            &:before
+                background-image: url('../images/clock.png')
+                background-image: url('../images/clock.svg')
+
+
+    &__region
+        font-size: 1.4rem
+        color: $color-grey
+        line-height: 1

@@ -1,5 +1,5 @@
 /* ------------------------------------
-    404 Error
+    404 Error Page
  ------------------------------------*/
 
 .error404
@@ -11,8 +11,13 @@
 
     font-family: $heading-family
 
-    h1
+    &__404
         margin: 0
-
-        font-size: 40.4rem
         line-height: 1
+        font-size: 12rem
+
+        @include mq($break-medium)
+            font-size: 30rem
+
+    &__message
+        font-size: 2.6rem
