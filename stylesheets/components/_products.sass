@@ -2,6 +2,7 @@
     Products
  ------------------------------------*/
 
+// Applies to all products
 .product
     &__image
         margin: 0
@@ -21,7 +22,7 @@
             color: $color-primary
 
 
-// Single Product Styles
+// Single product page
 .product-single
     @extend %clearfix
 
@@ -50,6 +51,10 @@
                 @include mq($break-big, null, max)
                     max-width: 33.30%
 
+                &:hover
+                    cursor: pointer
+
+                &:hover,
                 &.slick-current
                     opacity: .8
 
@@ -84,6 +89,7 @@
     // Pice table
     .price-table
         width: 100%
+
 
 
 // Product List
@@ -121,11 +127,15 @@
 
 
 .product-cat
+    margin-bottom: $spacing * 4
+
     @include mq($break-medium)
         @include col(1/3)
+        margin-bottom: 0
 
     h3
         font-size: 1.8rem
+
 
 .product-item--vertical
     @extend %clearfix

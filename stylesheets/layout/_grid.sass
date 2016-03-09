@@ -18,16 +18,20 @@
 
     @include mq($break-medium, null, max)
         max-width: 90%
-        margin: 0 auto
+        margin-left: auto
+        margin-right: auto
 
 
 main
     $margin: $spacing * 4
 
-    margin-top: $margin
-    margin-bottom: $margin
+    margin: $margin auto
 
 
+
+// I'm testing it's abilities. Not yet ready to be used with
+// MQ mixin since I am still testing everything and trying to
+// get everything to work with everything in harmony
 $breakpoints: (sm: 375px,    md: 668px,    lg: 960px)
 
 @mixin all-sizes($class)
@@ -35,9 +39,28 @@ $breakpoints: (sm: 375px,    md: 668px,    lg: 960px)
             @content
 
         @each $bp, $size in $breakpoints
-            @include mq($size, null, max)
+
+            @if variable-exists(prev-bp) == false
+                $prev-bp: 0px
+
+            @include mq($prev-bp, $size)
                 #{$class}\@#{$bp}
                     @content
+
+            // Update previous break-point
+            $prev-bp: $size
+
+//@mixin all-sizes($class)
+        #{$class}
+            @content
+
+        @each $bp, $size in $breakpoints
+            $previous-bp: $size
+
+            @include mq($size, 800px, max)
+                #{$class}\@#{$bp}
+                    @content
+                    content: $previous-bp
 
 
 /** Alignment **/
@@ -51,7 +74,8 @@ $breakpoints: (sm: 375px,    md: 668px,    lg: 960px)
 
 @include all-sizes('.center')
     display: block
-    margin: 0 auto
+    margin-left: auto
+    margin-right: auto
 
 
 /** Hide elements **/

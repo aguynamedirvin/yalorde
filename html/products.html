@@ -1,0 +1,55 @@
+include "parts/header.html"
+
+
+        <div class="shop__header" style="background-image: url('assets/images/examples/dresses.jpg')">
+            <h1 class="page__title">Dresses</h1>
+        </div>
+
+
+        <main class="wrap  shop">
+
+            <ul class="nav  breadcrumbs  hide@md">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Dresses</a></li>
+                <li><a class="current" href="#">XIV</a></li>
+            </ul>
+
+            <!-- Filter products -->
+            <div class="product-filter">
+                <h4>Filter</h4>
+                <select>
+                    <option>Category</option>
+                    <option>Bridal</option>
+                    <option>Prom</option>
+                    <option>Cocktail</option>
+                    <option>Homecoming</option>
+                </select>
+
+                <select>
+                    <option>Occasion</option>
+                    <option>Formal</option>
+                    <option>Semi-formal</option>
+                    <option>All occassion</option>
+                </select>
+            </div><!-- /. filter products -->
+
+
+            include "parts/product.products.html"
+            include "parts/product.products.html"
+
+
+            <!-- Page navigation -->
+            <div class="page-nav">
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+            </div><!-- /. page navigation -->
+
+        </main>
+
+
+include "parts/footer.html"

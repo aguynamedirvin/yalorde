@@ -7,26 +7,55 @@
         display: inline-block
 
 
+/** Page navigation **/
+.page-nav
+    @extend .nav
+    text-align: center
+
+    $nav: 42px
+
+    a
+        position: relative
+        display: block
+
+        width: $nav
+        height: $nav
+
+        margin-right: $spacing / 2
+
+        transition: all .3s ease-in-out
+        text-align: center
+
+        border: 1px solid $color-grey
+        border-radius: 50%
+
+        font-size: 1.8rem
+        line-height: $nav
+
+        &:hover,
+        &:active
+            transform: scale(1.1)
+
+            border-color: $color-primary
+
+
 /** Breadcrumbs **/
 .breadcrumbs
+    text-transform: capitalize
+    font-size: 1.6rem
+
     li
-        font-size: 1.6rem
-
-        text-transform: capitalize
-
         &:after
-            margin: 0 1rem
-
             content: '>'
-
+            margin: 0 1rem
             color: $color-grey
 
         &:last-of-type:after
             content: ''
 
-        a
-            color: $color-grey
+    a
+        color: $color-grey
 
-            &:hover,
-            &.current
-                color: $color-mine-shaft
+        &:hover,
+        &.current
+            color: $color-mine-shaft
