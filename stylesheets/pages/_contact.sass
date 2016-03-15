@@ -32,6 +32,15 @@ $padding: $spacing * 4
             margin: 0
             padding-left: $padding
 
+    &__detail
+        font-size: 1.4rem
+        letter-spacing: 1px
+
+    &__region
+        font-size: 1.2rem
+        color: $color-grey
+        line-height: 1
+
     &__method
         padding-left: 75px
         position: relative
@@ -39,23 +48,25 @@ $padding: $spacing * 4
         min-height: 70px
 
         h3
-            font-size: 1.8rem
+            @extend %underline
             margin: 0 0 ($spacing / 2)
 
         &:before
+            $icon-size: 38px
+
             content: ' '
             display: inline-block
-            width: 42px
-            height: 42px
+            width: $icon-size
+            height: $icon-size
             position: absolute
             left: 0
+            top: 6px
             background-repeat: no-repeat
             background-position: center
             background-size: contain
 
         &--phone
             &:before
-                height: 38px
                 background-image: url('../images/phone.png')
                 background-image: url('../images/phone.svg')
 
@@ -68,9 +79,3 @@ $padding: $spacing * 4
             &:before
                 background-image: url('../images/clock.png')
                 background-image: url('../images/clock.svg')
-
-
-    &__region
-        font-size: 1.4rem
-        color: $color-grey
-        line-height: 1
