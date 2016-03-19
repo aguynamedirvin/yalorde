@@ -92,6 +92,16 @@
 
 
 
+//
+// Product Lists
+//
+
+// Global styles for list product
+.product-item
+    width: 100%
+    margin-bottom: $spacing
+
+
 // Product List
 .product__list
     @include row
@@ -108,21 +118,43 @@
         &__title
             font-size: 1.4rem
 
+    .product-item
+        display: inline-block
+        vertical-align: top
+        padding-right: 1rem
+        padding-left: 1rem
 
-.product-item
-    width: 100%
-    margin-bottom: $spacing
+        @include mq($break-small)
+            width: 49%
 
-    @include mq($break-small)
-        @include col(1/2)
+        @include mq($break-medium)
+            width: 24%
 
-    @include mq($break-medium)
-        @include col(1/4)
+        .product
+            &__meta
+                text-align: center
 
 
-    .product
-        &__meta
-            text-align: center
+
+// Vertical Product List
+.product__list--vertical
+    .product-item
+        @extend %clearfix
+
+        .product
+            &__image
+                @include col(4/12, false)
+                height: 100px
+                overflow: hidden
+
+            &__meta
+                @include col(8/12)
+
+            &__title
+                margin-top: 0
+                margin-bottom: $spacing / 2
+
+
 
 .product-cat
     margin-bottom: $spacing * 4
@@ -139,21 +171,3 @@
         margin-top: 0
         margin-bottom: $spacing * 2
         @extend %underline
-
-
-.product-item--vertical
-    @extend %clearfix
-    margin-bottom: $spacing
-
-    .product
-        &__image
-            @include col(4/12, false)
-            height: 100px
-            overflow: hidden
-
-        &__meta
-            @include col(8/12)
-
-        &__title
-            margin-top: 0
-            margin-bottom: $spacing / 2
