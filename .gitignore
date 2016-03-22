@@ -1,5 +1,5 @@
 /node_modules
 /dist/assets
 .csscomb.json
-/dist/thumbs
+/dist/thumbs/*
 /dist/site/cache
