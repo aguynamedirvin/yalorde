@@ -1,0 +1,29 @@
+Title: Dress with no image
+
+----
+
+Sku: 
+
+----
+
+Price: 19.99
+
+----
+
+Saleprice: 
+
+----
+
+Bulkdiscount: true
+
+----
+
+Featured-image: 
+
+----
+
+Tags: 
+
+----
+
+Relatedproducts: 

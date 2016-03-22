@@ -1,0 +1,64 @@
+<?php snippet('header') ?>
+
+    <div class="location--map">
+        <iframe width="100%" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1830%20Joe%20Battle%20Boulevard%20%23105%2C%20El%20Paso%2C%20TX%2C%20United%20States&key=AIzaSyCBYY1loxW2aZb6HsZ-Hi6BtawaXNnOMU8" allowfullscreen></iframe>
+    </div>
+
+    <main class="wrap">
+
+        <h1 class="page__title"><?php echo $page->title()->html() ?></h1>
+
+        <div class="contact">
+
+            <!-- Contact form -->
+            <div class="contact__form">
+                <form method="POST">
+                    <input type="text" name="name" placeholder="Name" />
+                    <input type="email" name="email" placeholder="Email" />
+
+                    <textarea name="message" placeholder="Your message"></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div><!-- /.contact form -->
+
+
+            <!-- Contact info -->
+            <div class="contact__info">
+                <div class="contact__method  contact__method--phone">
+                    <h3>Phone</h3>
+                    <div class="contact__detail">
+                        <a href="tel: 2342342344">(234) 234 - 2344</a>
+                    </div>
+                </div>
+
+                <div class="contact__method  contact__method--location">
+                    <h3>Location</h3>
+                    <div class="contact__detail">
+                        <div class="contact__street">1830 Joe Battle Blvd. #105</div>
+                        <div class="contact__region">El Paso, TX 79936</div>
+                    </div>
+                </div>
+
+                <div class="contact__method  contact__method--operation">
+                    <h3>Hours</h3>
+                    <div class="contact__detail">
+                        <div class="contact__hour-set">
+                            <span class="contact__days">Mon – Sat:</span>
+                            <span class="contact__hours">10:30am – 7:00pm</span>
+                        </div>
+                        <div class="contact__hour-set">
+                            <span class="contact__days">Sun:</span>
+                            <span class="contact__hours">11:00am – 3:00pm</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.contact info -->
+
+
+        </div><!-- /.contact container -->
+
+    </main>
+
+<?php snippet('footer') ?>

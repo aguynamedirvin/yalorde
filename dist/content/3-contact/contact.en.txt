@@ -1,0 +1,46 @@
+Title: Contact
+
+----
+
+Work-hours: 
+
+- 
+  day: Mon – Sat
+  open_hours: 10:30
+  closing_hours: 19:00
+- 
+  day: Sun
+  open_hours: 11:00
+  closing_hours: 15:00
+
+----
+
+Phone: (915) 231-6762
+
+----
+
+Email: yalordeboutique@gmail.com
+
+----
+
+Facebook: https://www.facebook.com/YalordeBoutique/
+
+----
+
+Twitter: http://www.twitter.com/Yalorde
+
+----
+
+Pinterest: 
+
+----
+
+Google-plus: 
+
+----
+
+Location: {"address":"11830 Joe Battle Blvd #105 El Paso, TX 7993","lat":"31.7057233","lng":"-106.28098130000001"}
+
+----
+
+Instagram: 

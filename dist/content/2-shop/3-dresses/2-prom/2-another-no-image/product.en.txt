@@ -1,0 +1,29 @@
+Title: Another no image
+
+----
+
+Sku: 
+
+----
+
+Price: 999
+
+----
+
+Saleprice: 
+
+----
+
+Bulkdiscount: true
+
+----
+
+Featured-image: 
+
+----
+
+Tags: 
+
+----
+
+Relatedproducts: 

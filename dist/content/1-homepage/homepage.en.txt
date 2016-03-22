@@ -1,0 +1,17 @@
+Title: Homepage
+
+----
+
+Text: 
+
+----
+
+Top-categories: accessories, jewelry, dresses
+
+----
+
+Bottom-categories: accessories, jewelry, dresses
+
+----
+
+Tags: dresses,jewelry,womens fashion,accessories,fashion accessories

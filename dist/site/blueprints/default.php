@@ -1,0 +1,18 @@
+<?php if(!defined('KIRBY')) exit ?>
+
+title: Page
+icon: file-text
+
+pages: true
+files: true
+
+fields:
+    title:
+        label: Title
+        type:  text
+    text:
+        label: Text
+        type:  textarea
+    tags:
+        label: Tags
+        type: tags

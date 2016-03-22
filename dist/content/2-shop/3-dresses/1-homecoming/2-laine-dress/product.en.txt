@@ -1,0 +1,29 @@
+Title: Laine Dress
+
+----
+
+Sku: 
+
+----
+
+Price: 105
+
+----
+
+Saleprice: 
+
+----
+
+Bulkdiscount: true
+
+----
+
+Featured-image: 
+
+----
+
+Tags: 
+
+----
+
+Relatedproducts: 

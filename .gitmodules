@@ -1,0 +1,21 @@
+[submodule "dist/panel"]
+	path = dist/panel
+	url = https://github.com/getkirby/panel.git
+[submodule "dist/kirby"]
+	path = dist/kirby
+	url = https://github.com/getkirby/kirby.git
+[submodule "dist/site/fields/multiselect"]
+	path = dist/site/fields/multiselect
+	url = https://github.com/distantnative/multiselect.git
+[submodule "dist/site/fields/kirby-place-field"]
+	path = dist/site/fields/kirby-place-field
+	url = https://github.com/AugustMiller/kirby-place-field.git
+[submodule "dist/site/fields/--name"]
+	path = dist/site/fields/--name
+	url = https://github.com/storypioneers/kirby-selector.git
+[submodule "dist/site/fields/selector"]
+	path = dist/site/fields/selector
+	url = https://github.com/storypioneers/kirby-selector.git
+[submodule "dist/site/fields/location"]
+	path = dist/site/fields/location
+	url = https://github.com/AugustMiller/kirby-place-field.git

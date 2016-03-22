@@ -1,0 +1,89 @@
+<?php if(!defined('KIRBY')) exit ?>
+
+title: Contact page
+icon: envelope
+
+pages: false
+files: false
+
+deletable: false
+
+fields:
+    work_hours:
+        label: Working Hours
+        type: structure
+        style: table
+        fields:
+            day:
+                label: Day(s)
+                type: text
+                help: >
+                    Example: Mon – Fri
+            open_hours:
+                label: Opening time
+                type: time
+                interval: 30
+                help: >
+                    Time is based on a 24 hour format. Ex: 15:00 = 3:00pm
+            closing_hours:
+                label: Closing time
+                type: time
+                interval: 30
+                help: >
+                    Time is based on a 24 hour format. Ex: 15:00 = 3:00pm
+    phone:
+        label: Phone number
+        type: tel
+        width: 1/2
+        validate: tel
+    email:
+        label: Email address
+        type: email
+        validate: email
+        width: 1/2
+
+    line_social:
+        type: line
+        help: >
+            Enter links to your social profiles. Ex: http://facebook.com/SquarePixl
+    facebook:
+        label: Facebook
+        type: text
+        validate: url
+        icon: facebook
+        width: 1/2
+    twitter:
+        label: Twitter
+        type: text
+        validate: url
+        icon: twitter
+        width: 1/2
+    instagram:
+        label: Instagram
+        type: text
+        validate: url
+        icon: instagram
+        width: 1/2
+    google_plus:
+        label: Google Plus
+        type: text
+        validate: url
+        icon: google-plus
+        width: 1/2
+    pinterest:
+        label: Pinterest
+        type: text
+        validate: url
+        icon: pinterest
+        width: 1/2
+
+    location_line:
+        type: line
+    location:
+        label: Location
+        type: place
+        center:
+            lat: 45.5230622
+            lng: -122.67648159999999
+            zoom: 19
+        help: "Move the pin wherever you'd like, or search for a location!"

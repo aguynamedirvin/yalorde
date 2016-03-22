@@ -1,0 +1,13 @@
+Title: Yalorde
+
+----
+
+Text: 
+
+----
+
+Message: Llámenos hoy y tome 10% de descuento en su compra!
+
+----
+
+Display-message: true

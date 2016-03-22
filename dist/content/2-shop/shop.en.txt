@@ -1,0 +1,17 @@
+Title: Shop
+
+----
+
+Text: 
+
+----
+
+Tags: boutique,womens fashion,fashion accessories,dresses
+
+----
+
+Top-categories: accessories, jewelry, dresses
+
+----
+
+Bottom-categories: accessories, jewelry, dresses

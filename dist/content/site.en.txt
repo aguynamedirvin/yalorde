@@ -1,0 +1,17 @@
+Title: Yalorde
+
+----
+
+Text: 
+
+----
+
+Message: Call us today and take 10% off your purchase!
+
+----
+
+Display-message: true
+
+----
+
+Footer-links: homepage, contact, about

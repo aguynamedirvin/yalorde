@@ -1,0 +1,33 @@
+Title: Another Dress
+
+----
+
+Price: 39.99
+
+----
+
+Sale-price: 
+
+----
+
+Featured-image: 
+
+----
+
+Sku: 
+
+----
+
+Tags: dress,romper
+
+----
+
+Saleprice: 
+
+----
+
+Bulkdiscount: true
+
+----
+
+Relatedproducts: 
