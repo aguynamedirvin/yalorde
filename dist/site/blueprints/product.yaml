@@ -1,5 +1,3 @@
-<?php if(!defined('KIRBY')) exit ?>
-
 title: Product
 
 pages: false
@@ -31,9 +29,10 @@ fields:
         width: 1/4
     bulkdiscount:
         label: Bulk discount
-        type: toggle
-        text: yes/no
-        width: 1/2
+        type: checkbox
+        text: >
+            Yes
+        width: 1/4
         help: Offer bulk discount on this product?
     featured_image:
         label: Featured image
