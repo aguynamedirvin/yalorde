@@ -4,9 +4,10 @@
                 <h3><?= l::get('contact') ?></h3>
                 <ul>
                     <?php
-                        $address = $page('contact')->location()->yaml()['address'];
+                        $contact = page('contact');
+                        $address = $contact->location()->yaml()['address'];
                     ?>
-                    <li><a href="<?= page('contact')->url() ?>"><?= $address ?></a></li>
+                    <li><a href="<?= $contact->url() ?>"><?= $address ?></a></li>
                     <li>Tel. <a href="tel: +19152316762"><?= $contact->phone()->html() ?></a></li>
                     <li>Email. <a href="mailto: <?= $contact->email()->html() ?>"><?= $contact->email()->html() ?></a></li>
                 </ul>
@@ -17,11 +18,11 @@
                 <ul class="social-icons">
                     <?php
 
-                        $facebook   = page('contact')->facebook();
-                        $twitter    = page('contact')->twitter();
-                        $instagram  = page('contact')->instagram();
-                        $pinterest  = page('contact')->pinterest();
-                        $googleplus = page('contact')->google_plus();
+                        $facebook   = $contact->facebook();
+                        $twitter    = $contact->twitter();
+                        $instagram  = $contact->instagram();
+                        $pinterest  = $contact->pinterest();
+                        $googleplus = $contact->google_plus();
 
                     ?>
 
