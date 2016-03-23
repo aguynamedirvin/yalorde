@@ -41,7 +41,7 @@ Google-plus:
 
 Location: 
 
-address: '103 Joe Battle Blvd #105 El Paso, TX 7993'
+address: '103 Joe Battle Blvd #105 El Paso, TX 79938'
 lat: 31.7557228
 lng: -106.266753
 

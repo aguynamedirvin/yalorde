@@ -1,7 +1,13 @@
 <?php snippet('header') ?>
 
+    <?php
+
+    $address = $page->location()->yaml()['address'];
+
+    ?>
+
     <div class="location--map">
-        <iframe width="100%" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1830%20Joe%20Battle%20Boulevard%20%23105%2C%20El%20Paso%2C%20TX%2C%20United%20States&key=AIzaSyCBYY1loxW2aZb6HsZ-Hi6BtawaXNnOMU8" allowfullscreen></iframe>
+        <iframe width="100%" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=<?= rawurlencode($address) ?>&key=AIzaSyCBYY1loxW2aZb6HsZ-Hi6BtawaXNnOMU8" allowfullscreen></iframe>
     </div>
 
     <main class="wrap">
@@ -37,8 +43,8 @@
                 <div class="contact__method  contact__method--location">
                     <h3><?= l::get('location') ?></h3>
                     <div class="contact__detail">
-                        <div class="contact__street">1830 Joe Battle Blvd. #105</div>
-                        <div class="contact__region">El Paso, TX 79936</div>
+                        <div class="contact__street">103 Joe Battle Blvd. Suite #105</div>
+                        <div class="contact__region">El Paso, TX 79938</div>
                     </div>
                 </div>
 

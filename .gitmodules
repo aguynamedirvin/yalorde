@@ -22,3 +22,12 @@
 [submodule "dist/site/fields/subpage-list"]
 	path = dist/site/fields/subpage-list
 	url = https://github.com/flokosiol/kirby-subpagelist.git
+[submodule "dist/site/fields/place"]
+	path = dist/site/fields/place
+	url = https://github.com/AugustMiller/kirby-place-field.git
+[submodule "dist/site/fields/selecto"]
+	path = dist/site/fields/selecto
+	url = https://github.com/storypioneers/kirby-selector.git
+[submodule "dist/site/fields/subpagelist"]
+	path = dist/site/fields/subpagelist
+	url = https://github.com/flokosiol/kirby-subpagelist.git

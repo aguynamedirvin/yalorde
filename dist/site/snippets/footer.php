@@ -4,12 +4,9 @@
                 <h3><?= l::get('contact') ?></h3>
                 <ul>
                     <?php
-                        $contact = page('contact');
-
-                        $address = $contact->location();
-                        $address = json_decode($address, true);
+                        $address = $page('contact')->location()->yaml()['address'];
                     ?>
-                    <li><a href="<?= page('contact')->url() ?>"><?= $address['address'] ?></a></li>
+                    <li><a href="<?= page('contact')->url() ?>"><?= $address ?></a></li>
                     <li>Tel. <a href="tel: +19152316762"><?= $contact->phone()->html() ?></a></li>
                     <li>Email. <a href="mailto: <?= $contact->email()->html() ?>"><?= $contact->email()->html() ?></a></li>
                 </ul>
