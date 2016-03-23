@@ -1,15 +1,15 @@
-Title: Contact
+Title: Contactanos
 
 ----
 
 Work-hours: 
 
 - 
-  day: Mon – Sat
+  day: Lun – Sab
   open_hours: 10:30
   closing_hours: 19:00
 - 
-  day: Sun
+  day: Dom
   open_hours: 11:00
   closing_hours: 15:00
 

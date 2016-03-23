@@ -5,13 +5,13 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-        <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
+        <title><?= $page->title()->html() ?> – <?= $site->title()->html() ?></title>
 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="<?= $site->url() ?>/apple-touch-icon.png">
+        <link rel="shortcut icon" href="<?= $site->url() ?>/favicon.ico" type="image/x-icon" />
 
         <!-- Stylesheets -->
         <?= css('assets/css/main.css') ?>
@@ -33,11 +33,12 @@
                 <?php endif ?>
 
                 <span class="pull--right">
-                    <span class="block"><?= l::get('call-us') ?>: <a href="tel: +19151234567"><?= page('contact')->phone()->html() ?></a></span>
+                    <span class="block"><?= l::get('call-us') ?>: <a href="tel:+1<?= formatNumber(page('contact')->phone()) ?>"><?= page('contact')->phone()->html() ?></a></span>
                     <span class="block">
                         <?= l::get('language') ?>:
                         <?php foreach($site->languages() as $language): ?>
 							<a href="<?= $page->url($language->code()) ?>"><?= $language->name() ?></a>
+                            <?= e($language != $site->languages()->last(), ' / ') ?>
 						<?php endforeach ?>
                     </span>
                 </span>

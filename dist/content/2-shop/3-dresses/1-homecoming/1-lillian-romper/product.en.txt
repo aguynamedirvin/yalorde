@@ -10,7 +10,7 @@ Sale-price:
 
 ----
 
-Featured-image: example-2.jpg
+Featured-image: example-1.jpg
 
 ----
 
@@ -26,7 +26,7 @@ Saleprice: 19.99
 
 ----
 
-Bulkdiscount: true
+Bulkdiscount: 1
 
 ----
 

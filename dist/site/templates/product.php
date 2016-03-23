@@ -34,7 +34,7 @@
 
                     <?php snippet('breadcrumb') ?>
 
-                    <h1 class="product__title"><?= $product->title() ?></h1>
+                    <h1 class="product__title"><?= $product->title()->html() ?></h1>
 
                     <div class="product__price">
                         <?= formatPrice( $product->price(), $product->saleprice() ) ?>
@@ -53,7 +53,7 @@
 
                 <div class="product__section  product__by-phone">
                     <h3><?= l::get('order-by-phone') ?></h3>
-                    <p><a href="tel: +19152342341"><?= l::get('call-us') . ' ' . page('contact')->phone() ?></a></p>
+                    <p><a href="tel:+1<?= formatNumber(page('contact')->phone()) ?>"><?= l::get('call-us') . ' ' . page('contact')->phone()->html() ?></a></p>
                 </div>
 
                 <?php if ( $product->bulkdiscount()->isTrue() ): ?>

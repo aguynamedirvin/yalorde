@@ -112,7 +112,7 @@
                 <h3 class="product-cat__title"><?= $cat->title() ?></h3>
                 <div class="product__list--vertical">
 
-                    <?= snippet('list.product', array('products' => $products, 'smallthumb' => true)) ?>
+                    <?= snippet('list.product', ['products' => $products, 'smallthumb' => true]) ?>
 
                 </div>
                 <a class="section__view-more" href="<?= $cat->url() ?>"><?= l::get('shop') . ' ' . $cat->title() ?></a>

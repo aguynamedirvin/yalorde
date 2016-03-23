@@ -13,12 +13,12 @@
             <!-- Contact form -->
             <div class="contact__form">
                 <form method="POST">
-                    <input type="text" name="name" placeholder="Name" />
-                    <input type="email" name="email" placeholder="Email" />
+                    <input type="text" name="name" placeholder="<?= l::get('name') ?>" />
+                    <input type="email" name="email" placeholder="<?= l::get('email') ?>" />
 
-                    <textarea name="message" placeholder="Your message"></textarea>
+                    <textarea name="message" placeholder="<?= l::get('message') ?>"></textarea>
 
-                    <button type="submit">Send</button>
+                    <button type="submit"><?= l::get('send') ?></button>
                 </form>
             </div><!-- /.contact form -->
 
@@ -26,14 +26,16 @@
             <!-- Contact info -->
             <div class="contact__info">
                 <div class="contact__method  contact__method--phone">
-                    <h3>Phone</h3>
+                    <h3><?= l::get('phone') ?></h3>
                     <div class="contact__detail">
-                        <a href="tel: 2342342344">(234) 234 - 2344</a>
+                        <a href="tel:+1<?= formatNumber(page('contact')->phone()) ?>">
+                            <?= $page->phone()->html() ?>
+                        </a>
                     </div>
                 </div>
 
                 <div class="contact__method  contact__method--location">
-                    <h3>Location</h3>
+                    <h3><?= l::get('location') ?></h3>
                     <div class="contact__detail">
                         <div class="contact__street">1830 Joe Battle Blvd. #105</div>
                         <div class="contact__region">El Paso, TX 79936</div>
@@ -41,16 +43,23 @@
                 </div>
 
                 <div class="contact__method  contact__method--operation">
-                    <h3>Hours</h3>
+                    <h3><?= l::get('hours') ?></h3>
                     <div class="contact__detail">
-                        <div class="contact__hour-set">
-                            <span class="contact__days">Mon – Sat:</span>
-                            <span class="contact__hours">10:30am – 7:00pm</span>
-                        </div>
-                        <div class="contact__hour-set">
-                            <span class="contact__days">Sun:</span>
-                            <span class="contact__hours">11:00am – 3:00pm</span>
-                        </div>
+                        <?php foreach($page->work_hours()->toStructure() as $time): ?>
+                            <div class="contact__hour-set">
+                                <?php
+                                    // Create times
+                                    $opening_time = date_create($time->open_hours());
+                                    $closing_time = date_create($time->closing_hours());
+
+                                    // Format times
+                                    $opening_time = date_format($opening_time, 'g:i A');
+                                    $closing_time = date_format($closing_time, 'g:i A');
+                                ?>
+                                <span class="contact__days"><?= $time->day()->html() ?>:</span>
+                                <span class="contact__hours"><?= $opening_time ?> &#8212; <?= $closing_time ?></span>
+                            </div>
+						<?php endforeach ?>
                     </div>
                 </div>
 

@@ -50,11 +50,14 @@
 'location'      => 'Location',
 'hours'         => 'Hours',
 
+'name'          => 'Name',
+'email'         => 'Email',
+'message'       => 'Your message',
 'send'          => 'Send',
 
 
 
-// 404/Error page
+// 404 Error page
 'error-messge'  => 'Sorry, we couldn\'t find what you were looking for.',
 'return-home'   => 'Return to the homepage',
 
