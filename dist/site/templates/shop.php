@@ -5,8 +5,6 @@
     $category = $page;
     $products = $page->index()->visible()->filterBy('template', 'product')->paginate(16);
 
-    $product_count = $page->index()->visible()->filterBy('template', 'product')->count();
-
     $pagination = $products->pagination();
 
     ?>
@@ -16,8 +14,6 @@
     </div>
 
     <main class="wrap  shop">
-
-        Showing <?= $products->count() ?> of <?= $product_count ?> results
 
         <div class="product__list">
             <?= snippet('list.product', ['products' => $products]) ?>

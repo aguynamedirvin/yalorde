@@ -20,23 +20,46 @@
 
     // Specify default image width & height
     if ( !isset($width) ) {
-        $width = 270;
+        $width = 260;
     }
     if ( !isset($height) ) {
         $height = 400;
     }
 
+    // Mobile thumb image width & height
+    $sm_width = round($width / 1.5);
+    $sm_height = round($height / 1.5);
+
     // Regular thumb
     $thumb = thumb($image, array('width' => $width, 'height' => $height));
-    // Retina thumb
-    $thumbx2 = thumb($image, array('width' => $width * 1.5, 'height' => $height * 1.5));
+    // Mobile thumb
+    $thumbSM = thumb($image, array('width' => $sm_width, 'height' => $sm_height));
+
+    /////////////////////////////////////
+
+    $srcs = [$thumb, $thumbSM];
+    $srcset = '';
+
+    $i = 0;
+
+    foreach ($srcs as $src) {
+        $srcset .= $src->url();
+
+        $i++;
+
+        if ($i != count($srcs)) {
+            $srcset .= ', <br />';
+        }
+    }
+
+    /////////////////////////////////////
 
 
     $src = $thumb->url() . ' ' . $width . 'w';
-    $src2 = $thumbx2->url() . ' ' . $width * 1.5 . 'w';
+    $src2 = $thumbSM->url() . ' ' . $sm_width . 'w';
 
-    $srcset = $src . ' ' . $src2;
+    $srcset = $src . ', ' . $src2;
 
 ?>
 
-<img property="image" content="<?= $thumb->url() ?>" src="<?= $thumb->url() ?>" srcset="<?= $srcset ?>" title="<?= $product->title() ?>" width="100%">
+<img property="image" src="<?= $thumb->url() ?>" srcset="<?= $srcset ?>" sizes="(max-width: 665) 50vw, (min-width: 667px) 25vw, (max-width: 320px) 100vw, 260px" title="<?= $product->title() ?>" width="100%">

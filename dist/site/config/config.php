@@ -130,3 +130,76 @@ function shrinkImage($file, $maxDimension = 1000) {
         return response::error($e->getMessage());
     }
 }
+
+
+
+c::set('routes', array(
+    /**
+     * Remove 'shop' from the url
+     */
+    /*array(
+        'pattern' => array('(:any)', '(:any)/(:any)'),
+        'action'  => function($uid) {
+            $page = page($uid);
+
+            if(!$page) $page = page('shop/' . $uid);
+            if(!$page) $page = site()->errorPage();
+
+            return site()->visit($page);
+        }
+    ),
+    array(
+        'pattern' => 'shop/(:all)',
+        'action'  => function($uid) {
+            go($uid);
+        }
+    ),*/
+    /**
+     * Change shop category & subcategory urls
+     */
+    /*array(
+        'pattern' => 'category/(:all)',
+        'action'  => function($uid) {
+            $page = page('shop')->children()->index()->findByURI($uid);
+
+            // Check page exists
+            if(!$page) $page = site()->errorPage();
+
+            return site()->visit($page->uri());
+        }
+    ),
+    array(
+        'pattern' => 'shop/(:any)/(:any)',
+        'action'  => function($category, $subcategory) {
+            go('category/' . $category . '/' . $subcategory);
+        }
+    ),
+    array(
+        'pattern' => 'shop/(:any)',
+        'action'  => function($category) {
+            go('category/' . $category);
+        }
+    ),
+
+    /**
+     * Change product url
+     * 'shop/(category)/(subcategory)/(product)' -> 'product/(product)'
+     */
+    /*array(
+        'pattern' => 'product/(:any)',
+        'action'  => function($uid) {
+            $page = page('shop')->children()->index()->findByURI($uid);
+
+            // Check page exists
+            if(!$page) $page = site()->errorPage();
+
+            return site()->visit($page->uri());
+        }
+    ),
+    array(
+        'pattern' => 'shop/(:any)/(:any)/(:any)',
+        'action'  => function($category, $subcategory, $uid) {
+            go('product/' . $uid);
+        }
+    )*/
+));
