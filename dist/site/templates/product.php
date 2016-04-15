@@ -53,7 +53,7 @@
 
                 <div class="product__section  product__by-phone">
                     <h3><?= l::get('order-by-phone') ?></h3>
-                    <p><a href="tel:+1<?= formatNumber(page('contact')->phone()) ?>"><?= l::get('call-us') . ' ' . page('contact')->phone()->html() ?></a></p>
+                    <p><a href="tel:+1<?= formatPhone(page('contact')->phone()) ?>"><?= l::get('call-us') . ' ' . page('contact')->phone()->html() ?></a></p>
                 </div>
 
                 <?php if ( $product->bulkdiscount()->isTrue() ): ?>

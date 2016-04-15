@@ -25,9 +25,9 @@ function formatPrice( $price, $priceSale ) {
  * @var int, float
  */
 
- function formatNumber( $number ) {
+function formatPhone( $number ) {
     echo preg_replace("/[^0-9]/", "", $number);
- }
+}
 
 
 ?>

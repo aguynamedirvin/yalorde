@@ -62,4 +62,4 @@
 
 ?>
 
-<img property="image" src="<?= $thumb->url() ?>" srcset="<?= $srcset ?>" sizes="(max-width: 665) 50vw, (min-width: 667px) 25vw, (max-width: 320px) 100vw, 260px" title="<?= $product->title() ?>" width="100%">
+<img property="image" src="<?= $thumb->url() ?>" srcset="<?= $srcset ?>" sizes="(max-width: 665) 50vw, (min-width: 667px) 25vw, (max-width: 320px) 100vw, 260px" title="<?= $product->title() ?>" alt="<?= $product->title()->html() ?>" width="100%">

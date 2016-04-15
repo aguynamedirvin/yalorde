@@ -34,7 +34,7 @@
                 <div class="contact__method  contact__method--phone">
                     <h3><?= l::get('phone') ?></h3>
                     <div class="contact__detail">
-                        <a href="tel:+1<?= formatNumber(page('contact')->phone()) ?>">
+                        <a href="tel:+1<?= formatPhone(page('contact')->phone()) ?>">
                             <?= $page->phone()->html() ?>
                         </a>
                     </div>

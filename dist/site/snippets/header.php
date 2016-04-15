@@ -16,6 +16,30 @@
         <!-- Stylesheets -->
         <?= css('assets/css/main.css') ?>
 
+        <script type="application/ld+json">
+        {
+            "@context" : "http://schema.org",
+            "@type" : "LocalBusiness",
+            "name" : "<?= $site->title()->html() ?>",
+            "logo" : "<?= $site->url() . '/assets/images/small_logo.png' ?>",
+            "telephone" : "+1 <?php echo $site->phone() ?>",
+            "email" : "<?= page('contact')->email() ?>",
+            "url" : "<?= $site->url() ?>",
+            "contactPoint" : {
+                "@type" : "ContactPoint",
+                "telephone" : "+1 <?= page('contact')->phone() ?>",
+                "contactType" : "customer service",
+                "contactOption" : "TollFree",
+                "areaServed" : "US",
+                "availableLanguage": ["English", "Spanish"]
+            },
+            "sameAs" : [
+                "<?= page('contact')->facebook() ?>",
+                "<?= page('contact')->google_plus() ?>"
+            ]
+        }
+        </script>
+
 
     </head>
 
@@ -28,7 +52,7 @@
                 <?php endif ?>
 
                 <span class="pull--right">
-                    <span class="block"><?= l::get('call-us') ?>: <a href="tel:+1<?= formatNumber(page('contact')->phone()) ?>"><?= page('contact')->phone()->html() ?></a></span>
+                    <span class="block"><?= l::get('call-us') ?>: <a href="tel:+1<?= formatPhone(page('contact')->phone()) ?>"><?= page('contact')->phone()->html() ?></a></span>
                     <span class="block">
                         <?= l::get('language') ?>:
                         <?php foreach($site->languages() as $language): ?>

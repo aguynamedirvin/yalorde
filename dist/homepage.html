@@ -16,6 +16,37 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" href="assets/css/main.css">
 
+        <script type="application/ld+json">
+        {
+            "@context" : "http://schema.org",
+            "@type" : "LocalBusiness",
+            "name" : "Yalorde Boutique",
+            "logo" : "/assets/images/small_logo.png' ?>",
+            "telephone" : "+1 915 234 1243",
+            "email" : "yalorde@yalordeboutique.com",
+            "url" : "http://yalordeboutique.com/",
+            "address" : {
+                "@type" : "PostalAddress",
+                "addressLocality" : "El Paso",
+                "addressRegion" : "Texas",
+                "addressCountry" : "US",
+                "postalCode" : "79938"
+            },
+            "contactPoint" : {
+                "@type" : "ContactPoint",
+                "telephone" : "+1 915 234 2341",
+                "contactType" : "customer service",
+                "contactOption" : "TollFree",
+                "areaServed" : "US",
+                "availableLanguage": ["English", "Spanish"]
+            },
+            "sameAs" : [
+                "http://facebook.com/YalordeBoutique",
+                "http://plus.google.com/+YalordeBoutique"
+            ]
+        }
+        </script>
+
     </head>
 
     <body>
@@ -25,7 +56,7 @@
                 <span class="pull--left">Call us today and take 10% off your purchase!</span>
 
                 <span class="pull--right">
-                    <span class="block">Call us: <a href="tel: +19151234567">(915) 234 - 2341</a></span>
+                    <span class="block">Call us: <a href="tel:+19151234567">(915) 234 - 2341</a></span>
                     <span class="block">Language: <a href="#">English</a> / <a href="#">Spanish</a></span>
                 </span>
             </div>
@@ -45,7 +76,7 @@
                 </div>
 
                 <div class="site-header__cont">
-                    <a href="index.html">
+                    <a href="homepage.html">
                         <div id="logo"></div>
                     </a>
                 </div>
@@ -82,7 +113,7 @@
                 <img src="assets/images/examples/dresses.jpg" alt="Dresses" />
                 <div class="promo__meta">
                     <h2>Dresses</h2>
-                    <a class="btn" href="products.html">Shop Dresses</a>
+                    <div class="btn">Shop Dresses</div>
                 </div>
             </div>
         </a>
@@ -92,7 +123,7 @@
                 <img src="assets/images/examples/shoes.jpg" alt="Shoes" />
                 <div class="promo__meta">
                     <h2>Shoes</h2>
-                    <a class="btn" href="products.html">Shop Shoes</a>
+                    <div class="btn">Shop Shoes</div>
                 </div>
             </div>
         </a>
@@ -102,7 +133,7 @@
                 <img src="assets/images/examples/acessories.jpg" alt="Acessories" />
                 <div class="promo__meta">
                     <h2>Acessories</h2>
-                    <a class="btn" href="products.html">Shop Acessories</a>
+                    <div class="btn">Shop Acessories</div>
                 </div>
             </div>
         </a>
@@ -112,7 +143,7 @@
                 <img src="assets/images/examples/collections.jpg" alt="Collections" />
                 <div class="promo__meta">
                     <h2>Collections</h2>
-                    <a class="btn" href="products.html">Shop Collections</a>
+                    <div class="btn">Shop Collections</div>
                 </div>
             </div>
         </a>
@@ -128,8 +159,8 @@
             <div class="wrap">
 
                 <div class="section__meta">
-                    <h1 class="section__title">New Arrivals</h1>
-                    <p class="section__desc">Stay ahead of the fashion trends with our new arrivals</p>
+                    <h1 class="section__title">New arrivals</h1>
+                    <p class="section__desc">Stay ahead of the fashion trends with our newest arrivals</p>
                 </div>
 
                 <div class="product__list">
@@ -276,7 +307,7 @@
                 </div>
 
                 <div class="section__btn-container">
-                    <a class="btn" href="products.html">Shop Collections</a>
+                    <a class="btn" href="products.html">Shop collections</a>
                 </div>
 
             </div>
@@ -286,6 +317,11 @@
 
         <!-- Product Categories -->
         <section class="section  section__product-cats">
+
+            <div class="section__meta">
+                <h1 class="section__title">Shop by category</h1>
+            </div>
+
             <div class="wrap">
 
                 <div class="product-cat">
@@ -402,9 +438,9 @@
             </div>
 
             <div class="location--map">
-                <iframe height="500" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=1830%20Joe%20Battle%20Boulevard%20%23105%2C%20El%20Paso%2C%20TX%2C%20United%20States&key=AIzaSyCBYY1loxW2aZb6HsZ-Hi6BtawaXNnOMU8" allowfullscreen></iframe>
+                <iframe height="500" src="https://www.google.com/maps/embed/v1/place?q=1830%20Joe%20Battle%20Boulevard%20%23105%2C%20El%20Paso%2C%20TX%2C%20United%20States&key=AIzaSyCBYY1loxW2aZb6HsZ-Hi6BtawaXNnOMU8" allowfullscreen></iframe>
             </div>
-            
+
         </section>
 
     </main>
@@ -415,8 +451,8 @@
                     <h3>Contact</h3>
                     <ul>
                         <li><a href="contact.html">1830 Joe Battle Blvd #105 El Paso, TX 7993</a></li>
-                        <li>Tel. <a href="tel: +19152316762">(915) 231-6762</a></li>
-                        <li>Email. <a href="mailto: contact@yalorde.com">contact@yalorde.com</a></li>
+                        <li>Tel. <a href="tel:+19152316762">(915) 231-6762</a></li>
+                        <li>Email. <a href="mailto:contact@yalorde.com">contact@yalorde.com</a></li>
                     </ul>
                 </div>
 
@@ -455,7 +491,7 @@
 
 
         <!-- JavaScript -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script>
             // jQuery fallback
             if ( !window.jQuery ) {
@@ -465,11 +501,11 @@
 			WebFontConfig = {
 				google: {
 					families: ['Montserrat']
-				}/*,
+				},
 				custom: {
 					families: ['FontAwesome'],
 					urls: ['http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css']
-				}*/
+				}
 			};
 			(function(d) {
 				var wf = d.createElement('script'), s = d.scripts[0];
