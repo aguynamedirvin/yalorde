@@ -13,6 +13,8 @@
 'call-us'       => 'Call us',
 'language'      => 'Language',
 
+'search'        => 'Search...',
+
 'shop'          => 'Shop',
 
 'squarepixl'    => 'Crafted with <span class="heart animated infinite pulse">love</span> by <a href="http://squarepixl.com/">SquarePixl</a>.',
@@ -21,8 +23,13 @@
 
 
 // Homepage
-'new-arrivals'  => 'New arrivals',
-'collections'   => 'Collections',
+'new-arrivals'          => 'New arrivals',
+'stay-ahead-of-fashion' => 'Stay ahead of the fashion trends with our new arrivals',
+
+'collections'           => 'Collections',
+
+'upgrade-wardrobe'      => 'Upgrade your wardrobe',
+'visit-us-and-transform' => 'Visit us and start your transformation today',
 
 
 

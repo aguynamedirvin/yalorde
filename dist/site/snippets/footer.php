@@ -95,7 +95,7 @@
             },
             custom: {
                 families: ['FontAwesome'],
-                urls: ['http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css']
+                urls: ['https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css']
             }
         };
         (function(d) {

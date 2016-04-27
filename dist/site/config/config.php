@@ -132,8 +132,28 @@ function shrinkImage($file, $maxDimension = 1000) {
 }
 
 
+/*
 
+---------------------------------------
+Routes
+--------------------------------------
+
+*/
 c::set('routes', array(
+    /**
+     * Return search results
+     */
+    array(
+        'pattern'   => 'search/(:any)',
+        'action'    => function ($uri) {
+            $query   = $uri;
+            $results = page('shop')->index()->visible()->search($query, 'title|sku|tags')->toJson();
+            
+            return response::json(array(
+                $results
+            ));
+        }
+    ),
     /**
      * Remove 'shop' from the url
      */

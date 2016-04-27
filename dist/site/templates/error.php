@@ -1,4 +1,4 @@
-<?php snippet('header') ?>
+<?= snippet('header') ?>
 
     <main class="wrap">
 
@@ -10,4 +10,4 @@
 
     </main>
 
-<?php snippet('footer') ?>
+<?= snippet('footer') ?>

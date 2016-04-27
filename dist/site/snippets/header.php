@@ -65,9 +65,29 @@
         </div>
 
         <div class="site-header">
-            <a href="<?= $site->url() ?>">
-                <div id="logo"></div>
-            </a>
+            <div class="wrap">
+
+                <div class="site-header__cont  hide@md  hide@sm">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa  fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa  fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa  fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa  fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="site-header__cont">
+                     <a href="<?= $site->url() ?>">
+                        <div id="logo"></div>
+                    </a>
+                </div>
+
+                <div class="site-header__cont  hide@md  hide@sm">
+                    <input type="search" placeholder="<?= l::get('search') ?>" />
+                </div>
+
+            </div>
+
         </div>
 
         <?php snippet('nav') ?>

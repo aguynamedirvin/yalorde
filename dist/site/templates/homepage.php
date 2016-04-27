@@ -1,4 +1,4 @@
-<?php snippet('header') ?>
+<?= snippet('header') ?>
 
     <?php
 
@@ -103,7 +103,7 @@
 
                 <div class="section__meta">
                     <h1 class="section__title"><?= l::get('new-arrivals') ?></h1>
-                    <p class="section__desc">Stay ahead of the fashion trends with our new arrivals</p>
+                    <p class="section__desc"><?= l::get('stay-ahead-of-fashion') ?></p>
                 </div>
 
                 <div class="product__list">
@@ -136,8 +136,20 @@
 
             </div>
         </section>
+        
+        
+        <!-- Map -->
+        <section class="section">
+            <div class="section__meta">
+                <h1 class="section__title"><?= l::get('upgrade-wardrobe') ?></h1>
+                <p class="section__desc"><?= l::get('visit-us-and-transform') ?></p>
+            </div>
+            
+            <?= snippet('map') ?>
+
+        </section>
 
     </main>
 
 
-<?php snippet('footer') ?>
+<?= snippet('footer') ?>

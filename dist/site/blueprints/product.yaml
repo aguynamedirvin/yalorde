@@ -34,6 +34,14 @@ fields:
             Yes
         width: 1/4
         help: Offer bulk discount on this product?
+    sizes:
+        label: Sizes
+        type: multiselect
+        width: 1/4
+        options:
+            sm: Small
+            md: Medium
+            lg: Large
     featured_image:
         label: Featured image
         help: Select the image you would like to be displayed as the main image.

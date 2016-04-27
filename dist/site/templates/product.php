@@ -1,4 +1,4 @@
-<?php snippet('header') ?>
+<?= snippet('header') ?>
 
     <main class="wrap">
 
@@ -15,13 +15,13 @@
                     <div class="slider  product__slider">
                         <?php foreach ( $product->images() as $image ): ?>
                             <img src="<?= thumb($image, ['width' => 430, 'height' => 625])->url() ?>">
-                        <? endforeach ?>
+                        <?php endforeach ?>
                     </div>
 
                     <div class="product__thumbnails">
                         <?php foreach ( $product->images() as $image ): ?>
                             <img src="<?= thumb($image, ['width' =>  150, 'height' => 210])->url() ?>">
-                        <? endforeach ?>
+                        <?php endforeach ?>
                     </div>
                 <?php else: ?>
                     <?php $fallback = $site->images()->find('fallback.jpg'); ?>
@@ -80,7 +80,8 @@
                             <tr>
                                 <?php
                                     $original = $price * $i;
-                                    $cost = $price * ($i ** .95);
+                                    // We could use `**` instead of pow() but backwards compability.
+                                    $cost = $price * ( pow($i, 0.95) );
                                     $savings = $original - $cost;
 
                                     // Format/Round numbers
@@ -121,4 +122,4 @@
 
     </main>
 
-<?php snippet('footer') ?>
+<?= snippet('footer') ?>
