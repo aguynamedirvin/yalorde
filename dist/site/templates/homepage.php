@@ -12,9 +12,9 @@
 
     ?>
 
-    <!--<section class="promos">-->
+    <!--<section class="promos">
 
-        <?php /*
+        <?php
             $i = 0;
 
             foreach ($top_cats as $cat):
@@ -34,22 +34,20 @@
                                 // Get the first image
                                 $image = $cat->images()->sortBy('sort', 'asc')->first();
                             }
-                        } else {
-                            // Get image fallback
-                            $image =  $site->images()->find('fallback.jpg');;
+
+                            $thumb   = thumb($image, array('width' => 810, 'height' => 400));
+
+                            echo '<img src="' . $thumb->url() . '" alt="' . $cat->title()->html() . '" />';
                         }
 
-                        $thumb   = thumb($image, array('width' => 810, 'height' => 400));
-
                     ?>
-                    <img src="<?= $thumb->url() ?>" alt="<?= $cat->title()->html() ?>" />
                     <div class="promo__meta">
                         <h2><?= $cat->title()->html() ?></h2>
                         <a class="btn" href="products.html"><?= l::get('shop') . ' ' . $cat->title()->html() ?></a>
                     </div>
                 </div>
             </a>
-        <?php endforeach */ ?>
+        <?php endforeach ?>-->
 
         <section class="promos">
 
@@ -136,15 +134,15 @@
 
             </div>
         </section>
-        
-        
+
+
         <!-- Map -->
         <section class="section">
             <div class="section__meta">
                 <h1 class="section__title"><?= l::get('upgrade-wardrobe') ?></h1>
                 <p class="section__desc"><?= l::get('visit-us-and-transform') ?></p>
             </div>
-            
+
             <?= snippet('map') ?>
 
         </section>
