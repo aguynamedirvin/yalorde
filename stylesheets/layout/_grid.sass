@@ -35,32 +35,22 @@ main
 $breakpoints: (sm: 375px,    md: 668px,    lg: 960px)
 
 @mixin all-sizes($class)
-        #{$class}
-            @content
+    #{$class}
+        @content
 
-        @each $bp, $size in $breakpoints
+    @each $bp, $size in $breakpoints
 
-            @if variable-exists(prev-bp) == false
-                $prev-bp: 0px
+        $prev-bp: NULL
 
-            @include mq($prev-bp, $size)
-                #{$class}\@#{$bp}
-                    @content
+        @if $prev-bp == NULL
+            $prev-bp: 0px
 
-            // Update previous break-point
-            $prev-bp: $size
+        @include mq($prev-bp, $size)
+            #{$class}\@#{$bp}
+                @content
 
-//@mixin all-sizes($class)
-        #{$class}
-            @content
-
-        @each $bp, $size in $breakpoints
-            $previous-bp: $size
-
-            @include mq($size, 800px, max)
-                #{$class}\@#{$bp}
-                    @content
-                    content: $previous-bp
+        // Update previous break-point
+        $prev-bp: $size
 
 
 /** Alignment **/
