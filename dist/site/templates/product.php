@@ -32,7 +32,7 @@
             <div class="product__details">
                 <header class="product__section">
 
-                    <?php snippet('breadcrumb') ?>
+                    <?= snippet('breadcrumb') ?>
 
                     <h1 class="product__title"><?= $product->title()->html() ?></h1>
 
@@ -80,6 +80,7 @@
                             <tr>
                                 <?php
                                     $original = $price * $i;
+                                    
                                     // We could use `**` instead of pow() but backwards compability.
                                     $cost = $price * ( pow($i, 0.95) );
                                     $savings = $original - $cost;
@@ -114,8 +115,9 @@
 
         <!-- Related products -->
         <div class="section  product__list">
-            <h3 class="section__title"><?= l::get('related-products') ?></h3>
-
+            <div class="section__meta">
+                <h3 class="section__title"><?= l::get('related-products') ?></h3>
+            </div>
 
         </div>
 

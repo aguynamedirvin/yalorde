@@ -9,6 +9,7 @@
 
     &__cont
         @include col(1/3)
+        @extend %clearfix
 
     input[type="search"],
     .social-icons
@@ -34,3 +35,29 @@
     background-repeat: no-repeat
     background-position: center
     background-size: contain
+
+
+
+/** Search **/
+.search
+    position: relative
+    @extend %clearfix
+    
+.search__results
+    position: absolute
+    background: #fff
+    border: 1px solid $color-alto
+    padding: $spacing
+    width: 100%
+    border-radius: 10px
+    display: none
+    z-index: 1
+    right: 0
+    max-width: 300px
+    
+.search__results li
+    padding: 5px 0
+    
+    
+.search__input:focus .search__results
+    display: block

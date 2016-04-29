@@ -68,12 +68,7 @@
             <div class="wrap">
 
                 <div class="site-header__cont  hide@md  hide@sm">
-                    <ul class="social-icons">
-                        <li><a href="#"><i class="fa  fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa  fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa  fa-pinterest"></i></a></li>
-                        <li><a href="#"><i class="fa  fa-instagram"></i></a></li>
-                    </ul>
+                    <?= snippet('socialicons') ?>
                 </div>
 
                 <div class="site-header__cont">
@@ -83,11 +78,16 @@
                 </div>
 
                 <div class="site-header__cont  hide@md  hide@sm">
-                    <input type="search" placeholder="<?= l::get('search') ?>" />
+                    <div class="search">
+                        <form method="POST" action="search">
+                            <input class="search__input" type="search" placeholder="<?= l::get('search') ?>" />
+                            <div class="search__results"></div>
+                        </form>
+                    </div>
                 </div>
 
             </div>
 
         </div>
 
-        <?php snippet('nav') ?>
+        <?= snippet('nav') ?>
