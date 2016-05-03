@@ -78,11 +78,20 @@
                 </div>
 
                 <div class="site-header__cont  hide@md  hide@sm">
-                    <input type="search" placeholder="<?= l::get('search') ?>" />
+                    <div class="search">
+                        <form method="POST" action="search">
+                            <input class="search__input" type="search" placeholder="<?= l::get('search') ?>" />
+                            <div class="search__results">
+                                <li><a href="#">Dress</a></li>
+                                <li><a href="#">Another Dress</a></li>
+                                <li><a href="#">One More Dress</a></li>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
             </div>
 
         </div>
 
-        <?php snippet('nav') ?>
+        <?= snippet('nav') ?>

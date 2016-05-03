@@ -51,42 +51,42 @@
 
         <section class="promos">
 
-            <a href="#">
+            <a href="<?= page('shop/dresses')->url() ?>">
                 <div class="promo  promo--lg">
                     <img src="assets/images/examples/dresses.jpg" alt="Dresses" />
                     <div class="promo__meta">
                         <h2>Dresses</h2>
-                        <a class="btn" href="products.html">Shop Dresses</a>
+                        <a class="btn" href="<?= page('shop/dresses')->url() ?>">Shop Dresses</a>
                     </div>
                 </div>
             </a>
 
-            <a href="#">
+            <a href="<?= page('shop/jewelry')->url() ?>">
                 <div class="promo  promo--sm">
-                    <img src="assets/images/examples/shoes.jpg" alt="Shoes" />
+                    <img src="assets/images/examples/jewelry.jpg" alt="Jewelry" />
                     <div class="promo__meta">
-                        <h2>Shoes</h2>
-                        <a class="btn" href="products.html">Shop Shoes</a>
+                        <h2>Jewelry</h2>
+                        <a class="btn" href="<?= page('shop/jewelry')->url() ?>">Shop Jewelry</a>
                     </div>
                 </div>
             </a>
 
-            <a href="#">
+            <a href="<?= page('shop/accessories')->url() ?>">
                 <div class="promo  promo--sm">
-                    <img src="assets/images/examples/acessories.jpg" alt="Acessories" />
+                    <img src="assets/images/examples/accessories.jpg" alt="Accessories" />
                     <div class="promo__meta">
-                        <h2>Acessories</h2>
-                        <a class="btn" href="products.html">Shop Acessories</a>
+                        <h2>Accessories</h2>
+                        <a class="btn" href="<?= page('shop/accessories')->url() ?>">Shop Accessories</a>
                     </div>
                 </div>
             </a>
 
-            <a href="#">
+            <a href="<?= page('shop/dresses')->url() ?>">
                 <div class="promo  promo--lg">
                     <img src="assets/images/examples/collections.jpg" alt="Collections" />
                     <div class="promo__meta">
                         <h2>Collections</h2>
-                        <a class="btn" href="products.html">Shop Collections</a>
+                        <a class="btn" href="<?= page('shop/dresses')->url() ?>">Shop Collections</a>
                     </div>
                 </div>
             </a>

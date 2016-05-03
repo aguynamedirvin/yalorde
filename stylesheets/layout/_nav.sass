@@ -8,6 +8,7 @@
     font-size: 1.4rem
     border-bottom: 1px solid $color-alto
     position: relative
+    margin-bottom: $spacing
 
     &:before,
     &:after
@@ -19,15 +20,15 @@
         height: 1px
 
     &::before
-        top: -5px
+        top: 5px
 
     &:after
-        bottom: -5px
+        bottom: 5px
 
 
     a
         display: block
-        padding: ($spacing / 2) $spacing
+        padding: ($spacing) $spacing
         margin: 0 ($spacing / 2)
         color: $color-grey
 

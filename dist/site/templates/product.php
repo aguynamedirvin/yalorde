@@ -32,7 +32,7 @@
             <div class="product__details">
                 <header class="product__section">
 
-                    <?php snippet('breadcrumb') ?>
+                    <?= snippet('breadcrumb') ?>
 
                     <h1 class="product__title"><?= $product->title()->html() ?></h1>
 

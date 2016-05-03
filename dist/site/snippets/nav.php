@@ -1,13 +1,19 @@
+<?php
+
+    $pages = $pages->visible();
+    $categories = $site->children()->index()->filterBy('template', 'category');
+    $pages = $pages->merge($categories);
+
+?>
+
 <nav class="site-nav  nav">
     <div class="wrap">
         <ul>
-            <li><a class="current" href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="products.html">Dresses</a></li>
-            <li><a href="products.html">Accessories</a></li>
-            <li><a href="#">Collections</a></li>
-            <li><a href="products.html">Shoes</a></li>
-            <li><a href="products.html">Jewelry</a></li>
+            <?php foreach ($pages as $page): ?>
+                <li>
+                    <a href="<?= $page->url() ?>"><?= $page->title()->html() ?></a>
+                </li>
+            <?php endforeach ?>
         </ul>
     </div>
 </nav>

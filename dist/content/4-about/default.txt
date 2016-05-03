@@ -1,9 +1,0 @@
-Title: About
-
-----
-
-Text: 
-
-----
-
-Tags: about
