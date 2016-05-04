@@ -147,7 +147,7 @@ c::set('routes', array(
         'pattern'   => 'search/(:any)',
         'action'    => function ($uri) {
             $query   = $uri;
-            $results = page('shop')->index()->visible()->search($query, 'title|sku|tags')->limit(5)->toJson();
+            $results = page('shop')->index()->visible()->filterBy('template', 'product')->search($query, 'title|sku|tags')->limit(5)->toJson();
             
             return response::json(array(
                 $results

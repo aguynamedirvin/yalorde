@@ -14,4 +14,4 @@ Display-message: true
 
 ----
 
-Footer-links: homepage, contact, about
+Footer-links: homepage, shop, contact, search

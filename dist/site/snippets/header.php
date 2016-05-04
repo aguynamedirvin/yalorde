@@ -79,13 +79,14 @@
 
                 <div class="site-header__cont  hide@md  hide@sm">
                     <div class="search">
-                        <form method="POST" action="search">
-                            <input class="search__input" type="search" placeholder="<?= l::get('search') ?>" />
-                            <div class="search__results">
-                                <li><a href="#">Dress</a></li>
-                                <li><a href="#">Another Dress</a></li>
-                                <li><a href="#">One More Dress</a></li>
-                            </div>
+                        <form method="GET" action="<?= page('search')->url() ?>">
+                            <input  class="search__input" 
+                                    name="query" 
+                                    type="search" 
+                                    placeholder="<?= l::get('search') ?>"
+                                    <?= e( $query = get('query'), 'value="' . $query . '"'  ) ?>
+                            />
+                            <div class="search__results"></div>
                         </form>
                     </div>
                 </div>

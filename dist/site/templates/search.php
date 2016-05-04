@@ -1,22 +1,24 @@
 <?= snippet('header') ?>
 
-    <main class="wrap">
+    <?php
+        
+        if ( $query = get('query') ) {
+            $results = page('shop')->index()->visible()->filterBy('template', 'product')->search($query, 'title|sku|tags');
+        }
+    
+    ?>
 
-        <div class="search">
-            <input class="search__input" type="search" placeholder="Searh...">
-            <div class="search__results">
-                <ul>
-                    <li><a href="#">Lillian Romper</a></li>
-                    <li><a href="#">Lillian Romper</a></li>
-                    <li><a href="#">Lillian Romper</a></li>
-                    <li><a href="#">Lillian Romper</a></li>
-                </ul>
-            </div>
-        </div>
+    <div class="shop__header">
+        <h1 class="page__title">Search results for '<?= $query ?>'</h1>
+    </div>
 
-        <div>
-            Just example content. Search box results should go over this.
+    <main class="wrap  shop">
+        
+        <?php if ( $results != null ): ?>
+        <div class="product__list">
+            <?= snippet('list.product', ['products' => $results]); ?>
         </div>
+        <?php endif ?>
 
     </main>
 

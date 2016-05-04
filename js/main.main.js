@@ -65,19 +65,16 @@ $(document).ready(function(){
  * Instant search results
  *
  */
-var input           = jQuery('.search__input');
-var searchResults   = jQuery('.search__results');
+var input           = $('.search__input');
+var searchResults   = $('.search__results');
 
 input.on('keyup', function(e) {
-
     // I check if the length in the input is more than 3 characters
     if (input.val().length > 3) {
 
-        console.log('Send the data');
-
         $.ajax({
             // build the url
-            url: "/yalorde/dist/search/" + input.val() + "",
+            url: document.location.origin + "/dist/search/" + input.val() + "",
             context: searchResults
         }).done(function(data) {
 

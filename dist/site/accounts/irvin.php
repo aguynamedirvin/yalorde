@@ -7,8 +7,8 @@ password: >
 language: en
 role: admin
 history:
+  - shop
   - contact
   - shop/dresses/homecoming/lillian-romper
   - shop/jewelry/necklaces/iris-stone-pendant-necklace-in-white
   - shop/accessories/belts/calla-circles-stretch-belt
-  - shop/dresses/prom/another-no-image
