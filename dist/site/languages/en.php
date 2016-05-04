@@ -70,5 +70,11 @@
 
 
 
+// Search page
+'search-results'    => 'Search results for',
+'no-search-results' => 'No search results found for',
+
+
+
 
 ]); ?>

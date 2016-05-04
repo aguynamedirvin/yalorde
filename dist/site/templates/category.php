@@ -12,7 +12,9 @@
     ?>
 
     <div class="shop__header" style="background-image: url('assets/images/examples/dresses.jpg')">
-        <h1 class="page__title"><?= $category->title()->html() ?></h1>
+        <div class="wrap">
+            <h1 class="page__title"><?= $category->title()->html() ?></h1>
+        </div>
     </div>
 
     <main class="wrap  shop">

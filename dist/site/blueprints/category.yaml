@@ -14,6 +14,9 @@ fields:
     subcategories:
         label: Subcategories
         type: subpagelist
+    title:
+        label: Category title
+        type: text
     featured_image:
         label: Featured Image
         type: selector

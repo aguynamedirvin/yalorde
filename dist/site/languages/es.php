@@ -24,12 +24,12 @@
 
 // Homepage
 'new-arrivals'          => 'Recién llegados',
-'stay-ahead-of-fashion' => 'Stay ahead of the fashion trends with our new arrivals',
+'stay-ahead-of-fashion' => 'Mantente al tanto de la moda con nuestros nuevos estilos',
 
 'collections'           => 'Colecciones',
 
 'upgrade-wardrobe'      => 'Upgrade your wardrobe',
-'visit-us-and-transform' => 'Visit us and start your transformation today',
+'visit-us-and-transform' => 'Visitanos y empieza tu transformación ahora',
 
 
 
@@ -67,6 +67,12 @@
 // 404 Error page
 'error-messge'  => 'Lo sentimos, pero no hemos encontrado lo que estaba buscando.',
 'return-home'   => 'Regresar a la página de inicio',
+
+
+
+// Search page
+'search-results'    => 'Resultados para',
+'no-search-results' => 'No se encontró nada para',
 
 
 
