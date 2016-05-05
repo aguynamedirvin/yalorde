@@ -1,10 +1,11 @@
-<?php snippet('header') ?>
+<?= snippet('header') ?>
+
 
     <?= snippet('map') ?>
 
     <main class="wrap">
 
-        <h1 class="page__title"><?php echo $page->title()->html() ?></h1>
+        <h1 class="page__title"><?= $page->title()->html() ?></h1>
 
         <div class="contact">
 
@@ -68,4 +69,5 @@
 
     </main>
 
-<?php snippet('footer') ?>
+
+<?= snippet('footer') ?>

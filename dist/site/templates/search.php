@@ -29,5 +29,4 @@
     </main>
 
 
-
 <?= snippet('footer') ?>

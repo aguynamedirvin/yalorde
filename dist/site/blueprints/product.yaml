@@ -39,9 +39,11 @@ fields:
         type: multiselect
         width: 1/4
         options:
+            x-sm: X-Small
             sm: Small
             md: Medium
             lg: Large
+            x-lg: X-Large
     featured_image:
         label: Featured image
         help: Select the image you would like to be displayed as the main image.
@@ -52,17 +54,3 @@ fields:
     tags:
         label: Tags
         type: tags
-    relatedproducts:
-        label: Related products
-        type: structure
-        entry: >
-            {{product}}
-        fields:
-            product:
-                label: Related product
-                type: select
-                options: query
-                query:
-                    page: shop
-                    fetch: pages
-                    template: product

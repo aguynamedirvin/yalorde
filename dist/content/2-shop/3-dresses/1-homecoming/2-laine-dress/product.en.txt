@@ -2,7 +2,7 @@ Title: Laine Dress
 
 ----
 
-Sku: 
+Sku: 2017A
 
 ----
 
@@ -14,7 +14,7 @@ Saleprice:
 
 ----
 
-Bulkdiscount: true
+Bulkdiscount: 1
 
 ----
 
@@ -22,8 +22,12 @@ Featured-image:
 
 ----
 
-Tags: 
+Tags: red
 
 ----
 
 Relatedproducts: 
+
+----
+
+Sizes: x-sm, sm, md, lg
