@@ -74,9 +74,11 @@ input.on('keyup', function(e) {
 
         $.ajax({
             // build the url
-            url: document.location.origin + "/dist/search/" + input.val() + "",
+            url: document.location.origin + '/dist/search/' + encodeURIComponent(input.val()),
             context: searchResults
         }).done(function(data) {
+            
+            //console.log('Url: ' + document.location.origin + "/dist/search/" + encodeURIComponent(input.val()) + "");
 
             // convert the data to objects, console.log this to see
             // how the object is build and which keys you can use

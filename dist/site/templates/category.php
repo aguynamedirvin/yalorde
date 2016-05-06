@@ -1,14 +1,7 @@
 <?= snippet('header') ?>
 
     <?php
-
-    if ( $subcategory ) {
-        echo 'True';
-    } else {
-        echo 'False';
-    }
-
-
+        echo $subcategory->uri();
     ?>
 
     <div class="shop__header" style="background-image: url('assets/images/examples/dresses.jpg')">

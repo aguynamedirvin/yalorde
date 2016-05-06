@@ -127,7 +127,7 @@ module.exports = function (grunt) {
         uglify: {
             build: {
                 options: {
-                    //preserveComments: 'some'
+                    mangle: true
                 },
                 files: '<%=uglify.default.files %>'
             },

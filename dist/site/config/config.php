@@ -146,7 +146,8 @@ c::set('routes', array(
     array(
         'pattern'   => 'search/(:any)',
         'action'    => function ($uri) {
-            $query   = $uri;
+            
+            $query   = urldecode($uri);
             $results = page('shop')->index()->visible()->filterBy('template', 'product')->search($query, 'title|sku|tags')->limit(5)->toJson();
 
             return response::json(array(
@@ -161,21 +162,19 @@ c::set('routes', array(
         'pattern'   => 'shop/(:any)/(:any)',
         'action'    => function($category, $subcategory) {
 
-            $data = array(
-                'category'    => $category,
-                'subcategory' => $subcategory
-            );
-
             // Look for subcategory
             $subcategory = page('shop')->children()->index()->findByURI($subcategory);
-
 
             if (!$subcategory) {
                 // If subcategory doesn't exist then show 404
                 $page = site()->errorPage();
             } else {
                 $page = page('shop/' . $category);
+                $products = page($subcategory)->index()->visible()->filterBy('template', 'product');
             }
+            
+            $page = site()->errorPage();
+            //$page = page('shop/dresses');
 
             return array($page, $subcategory);
 
