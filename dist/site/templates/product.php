@@ -2,7 +2,7 @@
 
     <main class="wrap">
 
-        <article class="product  product-single">
+        <article class="product  product-single" itemscope itemtype="http://schema.org/Product">
 
             <figure class="product__images">
                 <?php if ( $product->hasImages() ): ?>
@@ -28,9 +28,9 @@
 
                     <?= snippet('breadcrumb') ?>
 
-                    <h1 class="product__title"><?= $product->title()->html() ?></h1>
+                    <h1 class="product__title" itemprop="name"><?= $product->title()->html() ?></h1>
 
-                    <div class="product__price">
+                    <div class="product__price" itemscope itemtype="http://schema.org/Offer">
                         <?= formatPrice( $product->price(), $product->saleprice() ) ?>
                     </div>
                 </header>
@@ -111,9 +111,9 @@
         <div class="section  product__list">
             <div class="section__meta">
                 <h3 class="section__title"><?= l::get('related-products') ?></h3>
-                
+
                 <?= snippet('list.product', ['products' => $related]) ?>
-                
+
             </div>
         </div>
 
