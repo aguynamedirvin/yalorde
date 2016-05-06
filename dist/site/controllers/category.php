@@ -1,6 +1,6 @@
 <?php
 
-return function($site, $pages, $page) {
+return function($site, $pages, $page, $data, $subcategory) {
 
     $category = $page;
 
@@ -22,6 +22,9 @@ return function($site, $pages, $page) {
     $products = $products->paginate(16);
     $pagination = $products->pagination();
 
-    return compact('category', 'products', 'product_count', 'pagination');
+
+    $subcategory = $subcategory;
+
+    return compact('category', 'products', 'product_count', 'pagination', 'data', 'subcategory');
 
 };

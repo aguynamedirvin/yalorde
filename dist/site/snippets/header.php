@@ -40,7 +40,6 @@
         }
         </script>
 
-
     </head>
 
     <body>
@@ -80,9 +79,9 @@
                 <div class="site-header__cont  hide@md  hide@sm">
                     <div class="search">
                         <form method="GET" action="<?= page('search')->url() ?>">
-                            <input  class="search__input" 
-                                    name="query" 
-                                    type="search" 
+                            <input  class="search__input"
+                                    name="query"
+                                    type="search"
                                     placeholder="<?= l::get('search') ?>"
                                     <?= e( $query = get('query'), 'value="' . $query . '"'  ) ?>
                             />

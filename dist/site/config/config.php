@@ -148,10 +148,37 @@ c::set('routes', array(
         'action'    => function ($uri) {
             $query   = $uri;
             $results = page('shop')->index()->visible()->filterBy('template', 'product')->search($query, 'title|sku|tags')->limit(5)->toJson();
-            
+
             return response::json(array(
                 $results
             ));
+        }
+    ),
+    /**
+     * Use same category template for subcategory
+     */
+    array(
+        'pattern'   => 'shop/(:any)/(:any)',
+        'action'    => function($category, $subcategory) {
+
+            $data = array(
+                'category'    => $category,
+                'subcategory' => $subcategory
+            );
+
+            // Look for subcategory
+            $subcategory = page('shop')->children()->index()->findByURI($subcategory);
+
+
+            if (!$subcategory) {
+                // If subcategory doesn't exist then show 404
+                $page = site()->errorPage();
+            } else {
+                $page = page('shop/' . $category);
+            }
+
+            return array($page, $data, $subcategory);
+
         }
     ),
     /**
