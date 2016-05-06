@@ -1,12 +1,13 @@
 <?= snippet('header') ?>
 
-    <?= print_r($data) . '<br />'?>
-
     <?php
 
-    echo $subcategory;
-    echo 'Category: ' . $data['category'] . '<br />';
-    echo 'Subcategory: ' . $data['subcategory'] . '<br />';
+    if ( $subcategory ) {
+        echo 'True';
+    } else {
+        echo 'False';
+    }
+
 
     ?>
 

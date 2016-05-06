@@ -177,7 +177,7 @@ c::set('routes', array(
                 $page = page('shop/' . $category);
             }
 
-            return array($page, $data, $subcategory);
+            return array($page, $subcategory);
 
         }
     ),
