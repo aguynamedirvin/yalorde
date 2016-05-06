@@ -156,31 +156,6 @@ c::set('routes', array(
         }
     ),
     /**
-     * Use same category template for subcategory
-     */
-    array(
-        'pattern'   => 'shop/(:any)/(:any)',
-        'action'    => function($category, $subcategory) {
-
-            // Look for subcategory
-            $subcategory = page('shop')->children()->index()->findByURI($subcategory);
-
-            if (!$subcategory) {
-                // If subcategory doesn't exist then show 404
-                $page = site()->errorPage();
-            } else {
-                $page = page('shop/' . $category);
-                $products = page($subcategory)->index()->visible()->filterBy('template', 'product');
-            }
-            
-            $page = site()->errorPage();
-            //$page = page('shop/dresses');
-
-            return array($page, $subcategory);
-
-        }
-    ),
-    /**
      * Remove 'shop' from the url
      */
     /*array(
