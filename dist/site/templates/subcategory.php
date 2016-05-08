@@ -12,31 +12,6 @@
         Showing <?= $products->count() ?> of <?= $product_count ?> results
 
 
-        <!-- Filter products -->
-        <div class="product-filter">
-            <h4>Filter</h4>
-
-            <form id="filters" action="" method="GET">
-                <select name="occasion" onchange="this.form.submit()">
-                    <option selected value="">Ocassion</option>
-
-                    <?php
-
-                        $subcats = $category->children()->visible();
-
-                    ?>
-
-                    <?php foreach ( $subcats as $cat ): ?>
-                        <?php
-                            $cat = $cat->title()->html()
-                        ?>
-                        <option <?= e(get('occasion') == $cat, 'selected') ?> value="<?= $cat ?>"><?= $cat ?></option>
-                    <?php endforeach ?>
-                </select>
-            </form>
-        </div><!-- /. filter products -->
-
-
         <div class="product__list">
             <?= snippet('list.product', ['products' => $products]) ?>
         </div>

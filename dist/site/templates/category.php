@@ -17,8 +17,8 @@
             <h4>Filter</h4>
 
             <form id="filters" action="" method="GET">
-                <select name="occasion" onchange="this.form.submit()">
-                    <option selected value="">Ocassion</option>
+                <select name="filter" onchange="this.form.submit()">
+                    <option selected value="">All</option>
 
                     <?php
 
@@ -30,7 +30,7 @@
                         <?php
                             $cat = $cat->title()->html()
                         ?>
-                        <option <?= e(get('occasion') == $cat, 'selected') ?> value="<?= $cat ?>"><?= $cat ?></option>
+                        <option <?= e(get('filter') == $cat, 'selected') ?> value="<?= $cat ?>"><?= $cat ?></option>
                     <?php endforeach ?>
                 </select>
             </form>

@@ -1,0 +1,164 @@
+//header height
+$header-height: 50px
+
+// z-index
+$content-zindex: 1
+$nav-zindex: 2
+$header-zindex: 3
+
+
+@include mq($break-big)
+    .mobile-header
+        display: none
+
+@include mq($break-big, null, max)
+    .site-header,
+    .site-nav
+        display: none
+
+
+
+body
+    &.overflow-hidden
+        /* when primary navigation is visible, the content in the background won't scroll */
+        overflow: hidden
+
+
+.mobile-header
+    position: fixed
+    top: 0
+    left: 0
+    background: rgba(#fff, .95)
+    height: $header-height
+    width: 100%
+    z-index: $header-zindex
+    box-shadow: 0 1px 2px rgba(#000, .3)
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+
+
+
+.mobile-logo
+    display: block
+    position: absolute
+    @include center(y)
+    left: .875em
+
+    img
+        padding: 4px
+        max-height: $header-height
+
+
+
+.mobile-nav-trigger
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 50px
+    z-index: 4
+
+    .mobile-menu-text
+        color: #fff
+        text-transform: uppercase
+        /* hide the text on small devices */
+        display: none
+
+
+    .mobile-menu-icon
+        /* this span is the central line of the menu icon */
+        display: inline-block
+        position: absolute
+        @include center
+        width: 18px
+        height: 2px
+        background: $color-mine-shaft
+        transition: background-color .3s
+
+        /* these are the upper and lower lines in the menu icon */
+        &:before,
+        &:after
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            background: $color-mine-shaft
+            right: 0
+            transition: transform .3s, top .3s, background-color 0s
+
+        &:before
+            top: -5px
+
+        &:after
+            top: 5px
+
+        &.is-clicked
+            background: #fff
+
+            &:before,
+            &:after
+                background: $color-mine-shaft
+
+            &:before
+                top: 0
+                transform: rotate(135deg)
+
+            &:after
+                top: 0
+                transform: rotate(225deg)
+
+
+.mobile-nav
+    position: fixed
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+    background: rgba(#fff, 0.95)
+    z-index: $nav-zindex
+    text-align: center
+    padding: $header-height 0
+    backface-visibility: hidden
+    overflow: auto
+
+    /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+    -webkit-overflow-scrolling: touch
+
+    transform: translateY(-100%)
+    transition-property: transform
+    transition-duration: 0.4s
+
+    li
+        font-size: 2rem
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        margin: $spacing 0 0 0
+        text-transform: capitalize
+
+
+    a
+        display: inline-block
+        border-radius: 0.25em
+        transition: background 0.2s
+
+        .no-touch &:hover
+            background-color: #e36767
+
+
+
+    .mobile-label
+        text-transform: uppercase
+        font-size: 2rem
+        margin-top: $spacing * 4
+        font-family: $heading-family
+
+
+    &.is-visible
+        transform: translateY(0)
+
+
+
+//main
+    position: relative
+    z-index: $content-zindex

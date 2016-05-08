@@ -66,7 +66,7 @@
         <div class="site-header">
             <div class="wrap">
 
-                <div class="site-header__cont  hide@md  hide@sm">
+                <div class="site-header__cont  hide@md">
                     <?= snippet('socialicons') ?>
                 </div>
 
@@ -76,7 +76,7 @@
                     </a>
                 </div>
 
-                <div class="site-header__cont  hide@md  hide@sm">
+                <div class="site-header__cont  hide@md">
                     <div class="search">
                         <form method="GET" action="<?= page('search')->url() ?>">
                             <input  class="search__input"

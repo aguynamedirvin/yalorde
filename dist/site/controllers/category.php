@@ -11,11 +11,11 @@ return function($site, $pages, $page) {
     $product_count = $products->count();
 
     // Filter by occasion
-    $occasion = get('occasion');
+    $filter = get('filter');
 
-    if ( $occasion != '' ) {
-        $test = page($category . '/' . strtolower($occasion));
-        $products = $test->children()->visible()->filterBy('template', 'product');
+    if ( $filter != '' ) {
+        $filter = $category->children()->findByURI(strtolower($filter));
+        $products = $filter->children()->visible()->filterBy('template', 'product');
     }
 
     // Add pagination
