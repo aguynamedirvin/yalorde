@@ -38,9 +38,7 @@
         <ul class="mobile-nav">
 
             <?php foreach ($pages as $page): ?>
-            <li>
-                <a href="<?= $page->url() ?>"><?= $page->title()->html() ?></a>
-            </li>
+            <li><a href="<?= $page->url() ?>"><?= $page->title()->html() ?></a></li>
             <?php endforeach ?>
 
 
