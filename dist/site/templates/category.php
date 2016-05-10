@@ -1,17 +1,16 @@
 <?= snippet('header') ?>
 
-    <div class="shop__header" style="background-image: url('assets/images/examples/dresses.jpg')">
+
+    <div class="shop__header" <?= (isset($header_bg) ? 'style="background-image: url(' . $header_bg->url() . ')"' : ''); ?> >
         <div class="wrap">
             <h1 class="page__title"><?= $category->title()->html() ?></h1>
         </div>
     </div>
 
 
+
     <main class="wrap  shop">
-
-        Showing <?= $products->count() ?> of <?= $product_count ?> results
-
-
+        
         <!-- Filter products -->
         <div class="product-filter">
             <h4>Filter</h4>
@@ -19,17 +18,8 @@
             <form id="filters" action="" method="GET">
                 <select name="filter" onchange="this.form.submit()">
                     <option selected value="">All</option>
-
-                    <?php
-
-                        $subcats = $category->children()->visible();
-
-                    ?>
-
-                    <?php foreach ( $subcats as $cat ): ?>
-                        <?php
-                            $cat = $cat->title()->html()
-                        ?>
+                    <?php foreach ( $subcategories as $cat ): ?>
+                        <?php $cat = $cat->title()->html() ?>
                         <option <?= e(get('filter') == $cat, 'selected') ?> value="<?= $cat ?>"><?= $cat ?></option>
                     <?php endforeach ?>
                 </select>

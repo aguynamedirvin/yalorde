@@ -6,7 +6,7 @@
         if ( $product->featured_image()->isNotEmpty() ) {
             // Get featured image
             $image = $product->featured_image();
-            $image = $product->file($image)->dir() . '/' . $image;
+            $image = $product->files()->find($image);
         } else {
             // Get the first image
             $image = $product->images()->sortBy('sort', 'asc')->first();

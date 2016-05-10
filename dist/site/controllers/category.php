@@ -7,9 +7,20 @@ return function($site, $pages, $page) {
     // Fetch the products
     $products = $category->index()->visible()->filterBy('template', 'product');
 
-    // Get total prodict result count
-    $product_count = $products->count();
-
+    // Get the subcategories
+    $subcategories = $category->children()->visible();
+    
+    
+    // Get featured image
+    if ( $category->featured_image()->isNotEmpty() ) {
+        // Get featured image
+        $image = $category->featured_image();
+        $image = $category->files()->find($image);
+        
+        // Create the image
+        $header_bg = thumb($image, ['width' => 1000, 'height' => 200, 'crop' => true, 'upscale' => true, 'blur' => true]);
+    }
+    
     // Filter by occasion
     $filter = get('filter');
 
@@ -22,6 +33,6 @@ return function($site, $pages, $page) {
     $products = $products->paginate(16);
     $pagination = $products->pagination();
 
-    return compact('category', 'products', 'product_count', 'pagination');
+    return compact('category', 'products', 'subcategories', 'pagination', 'header_bg');
 
 };
