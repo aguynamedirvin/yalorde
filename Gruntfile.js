@@ -129,7 +129,29 @@ module.exports = function (grunt) {
                 options: {
                     mangle: true
                 },
-                files: '<%=uglify.default.files %>'
+                files: [
+                    
+                    // Template separates
+                    {
+                        '<%= dirs.dist.js %>/templates/product.js': '<%= dirs.src.js %>/slickslider.template.js',
+                    },
+                    
+                    // Main
+                    {
+                        dest: '<%= dirs.dist.js %>/main.min.js',
+                        src: '<%= dirs.src.js %>/*.main.js'
+                    },
+                    
+                    // Vendor          // Minified & stored separately
+                    {
+                        expand: true,
+                        cwd: '<%= dirs.src.js %>/vendor',
+                        src: '*.js',
+                        dest: '<%= dirs.dist.js %>/vendor',
+                        ext: '.min.js',
+                        extDot: 'last'
+                    }
+                ]
             },
             default: {
                 options: {
@@ -161,6 +183,12 @@ module.exports = function (grunt) {
                             extDot: 'last'
 
                         **/
+                    },
+                    
+                    // Template files   // This is used for the templates that require separate js in Kirby using @auto
+                    {
+                        dest: '<%= dirs.dist.js %>/template.min.js',
+                        src: '<%= dirs.src.js %>/*.template.js'
                     },
 
                     // Mobile.js       // Example: script1.mobile.js & script2.mobile.js -> mobile.min.js

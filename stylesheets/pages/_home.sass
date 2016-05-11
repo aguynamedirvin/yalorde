@@ -45,21 +45,8 @@
         @include center(y)
 
     h2
-        letter-spacing: 0px
-        color: #fff
-        font-size: 6.8rem
-        font-family: $font-family
-        text-transform: capitalize
-
-        //background-image: radial-gradient(50% 50%, ellipse cover, #0d0d0d, #ffffff 33%)
-        background: radial-gradient(closest-side, rgba(0,0,0, .6), transparent)
-        // add space for gradient
-        padding: 2rem 0
-        // leave title centered
-        margin-top: -2rem
-
-        margin-bottom: -4rem
-
+        @extend %heading-shadow
+        
         @include mq($break-medium)
             margin-bottom: ($spacing - 2rem)
 

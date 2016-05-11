@@ -74,6 +74,8 @@
             s.parentNode.insertBefore(wf, s);
         })(document);
     </script>
+    
+    <?= js('@auto') ?>
     <?= js('assets/js/main.min.js') ?>
 
 
