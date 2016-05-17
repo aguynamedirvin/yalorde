@@ -7,8 +7,8 @@ password: >
 language: en
 role: admin
 history:
+  - contact
   - shop/dresses/homecoming/laine-dress
   - shop/dresses
   - shop/accessories
   - shop/jewelry
-  - shop

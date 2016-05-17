@@ -3,7 +3,7 @@
 c::set('debug', true);
 c::set('cache', false);
 
-thumb::$defaults['quality'] = 100;
+thumb::$defaults['quality'] = 90;
 thumb::$defaults['upscale'] = true;
 thumb::$defaults['crop']    = true;
 
