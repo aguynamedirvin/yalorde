@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
 	var MQL = 960;
 
 	//primary navigation slide-in effect
-	if($(window).width() > MQL) {
+	/*if($(window).width() > MQL) {
 		var headerHeight = $('.mobile-header').height();
 		$(window).on('scroll',
 		{
@@ -26,25 +26,25 @@ jQuery(document).ready(function($){
 		    }
 		    this.previousTop = currentTop;
 		});
-	}
+	}*/
 
 	//open/close primary navigation
 	$('.mobile-nav-trigger').on('click', function(){
 
         var nav = $('.mobile-nav');
 
-		$('.mobile-menu-icon').toggleClass('is-clicked');
-		$('.mobile-header').toggleClass('menu-is-open');
+        $('.mobile-menu-icon').toggleClass('is-clicked');
+        $('.mobile-header').toggleClass('menu-is-open');
 
-		//in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
-		if( nav.hasClass('is-visible') ) {
-			nav.removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
-				$('body').removeClass('overflow-hidden');
-			});
-		} else {
-			nav.addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
-				$('body').addClass('overflow-hidden');
-			});
-		}
-	});
+        // In firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
+        if( nav.hasClass('is-visible') ) {
+            nav.removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+                $('body').removeClass('overflow-hidden');
+            });
+        } else {
+            nav.addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+                $('body').addClass('overflow-hidden');
+            });
+        }
+    });
 });

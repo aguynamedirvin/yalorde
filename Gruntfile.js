@@ -130,18 +130,18 @@ module.exports = function (grunt) {
                     mangle: true
                 },
                 files: [
-                    
+
                     // Template separates
                     {
-                        '<%= dirs.dist.js %>/templates/product.js': '<%= dirs.src.js %>/slickslider.template.js',
+                        '<%= dirs.dist.js %>/templates/product.js': ['<%= dirs.src.js %>/sliders.template.js', '<%= dirs.src.js %>/slickslider.template.js'],
                     },
-                    
+
                     // Main
                     {
                         dest: '<%= dirs.dist.js %>/main.min.js',
                         src: '<%= dirs.src.js %>/*.main.js'
                     },
-                    
+
                     // Vendor          // Minified & stored separately
                     {
                         expand: true,
@@ -184,7 +184,7 @@ module.exports = function (grunt) {
 
                         **/
                     },
-                    
+
                     // Template files   // This is used for the templates that require separate js in Kirby using @auto
                     {
                         dest: '<%= dirs.dist.js %>/template.min.js',
