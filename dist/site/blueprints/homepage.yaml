@@ -5,6 +5,7 @@ pages: false
 files: false
 
 deletable: false
+hide: true
 
 fields:
     top_categories:
