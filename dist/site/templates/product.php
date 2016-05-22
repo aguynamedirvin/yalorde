@@ -96,9 +96,17 @@
                     <h3>Info</h3>
                     <ul>
                         <?php if ( $product->style()->isNotEmpty() ): ?>
-                        <li>Style: <?= $product->style()->html() ?></li>
+                        <li><?= l::get('style') ?>: <?= $product->style()->html() ?></li>
                         <?php endif ?>
-                        <li>Tags: <a href="#">Dress</a>, <a href="#">Women</a>, <a href="#">Formal</a></li>
+
+                        <?php if ( $tags ): ?>
+                        <li><?= l::get('tags') ?>:
+                            <?php foreach ( $tags as $tag ): ?>
+                                <a href="<?= page('shop')->url() . '/tag:' . $tag ?>"><?= $tag ?></a><?= e($tag != end($tags), ',') ?>
+                            <?php endforeach ?>
+                        </li>
+                        <?php endif ?>
+
                         <li class="product__anticipation"><?= l::get('anticipation') ?></li>
                     </ul>
                 </div>
