@@ -70,9 +70,10 @@
 
 
 
-// Search page
-'search-results'    => 'Resultados para',
-'no-search-results' => 'No se encontró nada para',
+// Results
+'results-for'   => 'Resultados para',
+'tagged-with'   => 'Productos etiquetado con',
+'no-results'    => 'No se encontró nada',
 
 
 

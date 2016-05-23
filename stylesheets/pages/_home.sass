@@ -68,11 +68,14 @@
 
         object-fit: cover
 
-        transition: transform 3000ms ease
+        transition: transform 3000ms ease, filter 3500ms ease
+        transition-delay: 0, 2000ms
+        
         vertical-align: middle
 
     &:hover img
         transform: scale(1.1)
+        filter: blur(2px)
 
 /** Sections **/
 .section__product-cats
