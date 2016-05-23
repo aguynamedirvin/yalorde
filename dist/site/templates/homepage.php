@@ -94,7 +94,7 @@
                 </div>
 
                 <div class="product__list">
-                    <?= snippet('list.product', ['products' => $arrivals]) ?>
+                    <?= snippet('product.list', ['products' => $arrivals]) ?>
                 </div>
 
             </div>
@@ -114,7 +114,7 @@
                     <h3 class="product-cat__title"><?= $cat->title() ?></h3>
                     <div class="product__list--vertical">
 
-                        <?= snippet('list.product', ['products' => $products, 'smallthumb' => true]) ?>
+                        <?= snippet('product.list', ['products' => $products, 'smallthumb' => true]) ?>
 
                     </div>
                     <a class="section__view-more" href="<?= $cat->url() ?>"><?= l::get('shop') . ' ' . $cat->title() ?></a>

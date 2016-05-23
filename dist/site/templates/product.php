@@ -114,16 +114,17 @@
 
         </article><!-- /. product-single -->
 
-
+        
+        <?php if ( $related->count() ): ?>
         <!-- Related products -->
         <div class="section  product__list">
             <div class="section__meta">
                 <h3 class="section__title"><?= l::get('related-products') ?></h3>
 
-                <?= snippet('list.product', ['products' => $related]) ?>
-
+                <?= snippet('product.list', ['products' => $related]) ?>
             </div>
         </div>
+        <?php endif ?>
 
 
     </main>

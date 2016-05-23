@@ -12,7 +12,7 @@
     <main class="wrap  shop">
 
         <div class="product__list">
-            <?= snippet('list.product', ['products' => $results]); ?>
+            <?= snippet('product.list', ['products' => $results]); ?>
         </div>
         
     </main>
