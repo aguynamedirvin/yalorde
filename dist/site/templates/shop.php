@@ -3,7 +3,7 @@
 
     <div class="shop__header" style="background-image: url('assets/images/examples/dresses.jpg')">
         <h1 class="page__title">
-            <?= e($tag, 'Products tagged with: \'' . $tag . '\'', $category->title()->html()) ?>
+            <?= e($tag OR $query, 'Products tagged with: \'' . $tag . $query . '\'', $category->title()->html()) ?>
         </h1>
     </div>
 

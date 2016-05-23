@@ -9,19 +9,21 @@ return function($site, $pages, $page) {
 
     // Filter by tag
     $tag = param('tag');
-    
     if ( $tag ) {
         $products = $products->filterBy('tags', $tag, ',');
     }
-
-
-    // Get total prodict result count
-    $product_count = $products->count();
+    
+    // Filter by search query
+    $query = get('search');
+    if ( $query ) {
+        $products = $products->search($query, 'title|sku|tags');
+    }
 
     // Add pagination
     $products = $products->paginate(16);
     $pagination = $products->pagination();
 
-    return compact('category', 'products', 'product_count', 'pagination', 'tag');
+
+    return compact('category', 'products', 'pagination', 'tag', 'query');
 
 };

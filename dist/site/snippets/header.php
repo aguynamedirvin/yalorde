@@ -78,9 +78,9 @@
 
                 <div class="site-header__cont  hide@md">
                     <div class="search">
-                        <form method="GET" action="<?= page('search')->url() ?>">
+                        <form method="GET" action="<?= page('shop')->url() ?>">
                             <input  class="search__input"
-                                    name="query"
+                                    name="search"
                                     type="search"
                                     placeholder="<?= l::get('search') ?>"
                                     <?= e( $query = get('query'), 'value="' . $query . '"'  ) ?>
