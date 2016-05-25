@@ -11,6 +11,8 @@ return function($site, $pages, $page) {
     $bottom_cats = $page->bottom_categories()->split();
     $top_cats = $page->top_categories()->split();
     
+    
+    // Pass variables
     return compact('arrivals', 'index', 'top_cats', 'bottom_cats');
   
 };

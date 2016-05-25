@@ -102,7 +102,7 @@
                         <?php if ( $tags ): ?>
                         <li><?= l::get('tags') ?>:
                             <?php foreach ( $tags as $tag ): ?>
-                                <a href="<?= page('shop')->url() . '/tag:' . $tag ?>"><?= $tag ?></a><?= e($tag != end($tags), ',') ?>
+                                <a href="<?= page('shop')->url() . '/tag:' . $tag ?>"><?= $tag->html() ?></a><?= e($tag != end($tags), ',') ?>
                             <?php endforeach ?>
                         </li>
                         <?php endif ?>

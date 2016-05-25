@@ -12,10 +12,12 @@
             <!-- Contact form -->
             <div class="contact__form">
                 <form method="POST">
-                    <input type="text" name="name" placeholder="<?= l::get('name') ?>" />
-                    <input type="email" name="email" placeholder="<?= l::get('email') ?>" />
+                    <input type="text" name="name" placeholder="<?= l::get('name') ?>" value="<?= $data['name'] ?>" />
+                    <input type="email" name="email" placeholder="<?= l::get('email') ?>" value="<?= $data['email'] ?>" />
+                    
+                    <input class="hide" type="url" name="url" placeholder="Do not fill this in">
 
-                    <textarea name="message" placeholder="<?= l::get('message') ?>"></textarea>
+                    <textarea name="message" placeholder="<?= l::get('message') ?>"><?= $data['message'] ?></textarea>
 
                     <button type="submit"><?= l::get('send') ?></button>
                 </form>

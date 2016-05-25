@@ -1,5 +1,6 @@
     <footer class="site-footer">
         <div class="wrap">
+            
             <div class="footer__widget">
                 <h3><?= l::get('contact') ?></h3>
                 <ul>
@@ -8,10 +9,11 @@
                         $address = $contact->location()->yaml()['address'];
                     ?>
                     <li><a href="<?= $contact->url() ?>"><?= $address ?></a></li>
-                    <li>Tel. <a href="tel: +19152316762"><?= $contact->phone()->html() ?></a></li>
+                    <li>Tel. <a href="tel: +1<?= formatPhone($contact->phone()) ?>"><?= $contact->phone()->html() ?></a></li>
                     <li>Email. <a href="mailto: <?= $contact->email()->html() ?>"><?= $contact->email()->html() ?></a></li>
                 </ul>
             </div>
+            
             <div class="footer__widget">
                 <h3><?= l::get('follow-us') ?></h3>
 
@@ -22,21 +24,23 @@
                 <h3><?= l::get('quick-links') ?></h3>
                 <ul>
                     <?php
-
                         $links = $site->footer_links()->split();
-                        $index = $site->index();
-
-                        foreach ($links as $link) {
-                            $link = $index->findByURI($link);
-
-                            echo '<li><a href="' . $link->url() . '">' . $link->title() . '</a></li>';
+                        
+                        foreach ( $links as $link ) {
+                            $link = $site->index()->findByURI($link);
+                            
+                            if ( $link ) {
+                                echo '<li><a href="' . $link->url() . '">' . $link->title()->html() . '</a></li>';
+                            }
                         }
-
                     ?>
                 </ul>
             </div>
+            
         </div>
     </footer>
+
+
 
     <div class="site-info">
         <div class="wrap">
@@ -56,7 +60,7 @@
     <script>
         // jQuery fallback
         if ( !window.jQuery ) {
-            document.write('<script src="assets/js/vendor/jquery-2.2.0.min.js"><\/script>');
+            document.write('<script src="<?= $site->url() ?>/assets/js/vendor/jquery-2.2.0.min.js"><\/script>');
         }
         // Download fonts
         WebFontConfig = {
