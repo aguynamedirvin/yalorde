@@ -3,7 +3,7 @@
 
     <div class="shop__header" style="background-image: url('<?= $site->url() ?>/assets/images/examples/dresses.jpg')">
         <h1 class="page__title">
-            <?php 
+            <?php
                 if ( $products->count() ) {
                     if ( $tag ) {
                         echo l::get('tagged-with') . ': \'' . $tag . '\'';

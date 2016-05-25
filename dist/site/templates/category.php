@@ -9,8 +9,8 @@
 
 
     <main class="wrap  shop">
-        
-        
+
+
         <!-- Filter products -->
         <div class="product-filter">
             <h4>Filter</h4>

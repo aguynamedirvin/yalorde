@@ -1,7 +1,7 @@
 <?php
 
-$exclude = c::get('sitemap.exclude', array('error', 'search'));
-$important = c::get('sitemap.important', array('contact'));
+$exclude = c::get('sitemap.exclude', array('error'));
+$important = c::get('sitemap.important', array('contact', 'shop'));
 
 kirby()->routes(array(
     array(

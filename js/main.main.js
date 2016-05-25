@@ -51,7 +51,7 @@ input.on('keyup', function(e) {
             context: searchResults
         }).done(function(data) {
 
-            //console.log('Url: ' + document.location.origin + "/dist/search/" + encodeURIComponent(input.val()) + "");
+            console.log('Url: ' + document.location.origin + "/dist/search/" + encodeURIComponent(input.val()) + "");
 
             // convert the data to objects, console.log this to see
             // how the object is build and which keys you can use

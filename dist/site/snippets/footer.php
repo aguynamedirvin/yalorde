@@ -78,10 +78,10 @@
             s.parentNode.insertBefore(wf, s);
         })(document);
     </script>
-    
+
     <?= js('@auto') ?>
     <?= js('assets/js/main.min.js') ?>
-    
+
     <!-- Google Analytics -->
 	<script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

@@ -12,7 +12,7 @@ return function($site, $pages, $page) {
     if ( $tag ) {
         $products = $products->filterBy('tags', $tag, ',');
     }
-    
+
     // Filter by search query
     $query = get('search');
     if ( $query ) {
