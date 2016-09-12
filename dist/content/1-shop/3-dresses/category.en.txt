@@ -1,4 +1,12 @@
-Title: Dresses
+Products-tab: 
+
+----
+
+Products: 
+
+----
+
+Subcategories-tab: 
 
 ----
 
@@ -6,7 +14,15 @@ Subcategories:
 
 ----
 
-Featured-image: dresses-image.jpg
+Settings-tab: 
+
+----
+
+Title: Dresses
+
+----
+
+Featured-image: 
 
 ----
 
@@ -14,4 +30,4 @@ Text:
 
 ----
 
-Tags: dresses,bridal,quince,prom dresses,homecoming dresses,xv dresses
+Tags: dresses,homecoming dresses,prom dresses

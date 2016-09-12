@@ -5,36 +5,41 @@ return function($site, $pages, $page) {
     $category = $page;
 
     // Fetch the products
-    $products = $category->index()->visible()->filterBy('template', 'product');
+    $products = $category->index()->visible()->filterBy('template', 'product')->visible();
 
     // Get the subcategories
-    $subcategories = $category->children()->visible();
-    
+    $subcategories = $category->children()->filterBy('template', 'subcategory')->visible();
+
     // Get featured image
     if ( $category->featured_image()->isNotEmpty() ) {
         // Get featured image
         $image = $category->featured_image();
         $image = $category->files()->find($image);
-        
-        // Create the image
-        $header_bg = thumb($image, ['width' => 1000, 'height' => 200, 'crop' => true, 'upscale' => true, 'blur' => true, 'quality' => 70]);
-    }
-    
-    // Filter by occasion
-    $filter = get('filter');
 
-    if ( $filter != '' ) {
+        // Create the image
+        $header_bg = thumb($image, ['width' => 1200, 'height' => 200, 'crop' => true, 'upscale' => true, 'blur' => true, 'quality' => 80]);
+    }
+
+    // Filter by category
+    $filterCat = get('filterCategory');
+    if ( $filterCat != '' ) {
         // Replace spaces with dashes
-        $filter = str_replace(' ', '-', $filter);
-        
-        $filter = $category->children()->findByURI(strtolower($filter));
-        $products = $filter->children()->visible()->filterBy('template', 'product');
+        $filterCat = str_replace(' ', '-', $filterCat);
+        $filterCat = strtolower($filterCat);
+
+        $products = $products->filterBy('category', $filterCat, ',');
+    }
+
+    // Filter by color
+    $filterColor = get('filterColor');
+    if ( $filterColor != '' ) {
+        $products = $products->filterBy('colors', $filterColor, ',');
     }
 
     // Add pagination
     $products = $products->paginate(16);
     $pagination = $products->pagination();
 
-    return compact('category', 'products', 'subcategories', 'pagination', 'header_bg');
+    return compact('category', 'products', 'subcategories', 'pagination', 'header_bg', 'filterCat', 'filterColor');
 
 };

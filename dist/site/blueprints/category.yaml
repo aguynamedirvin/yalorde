@@ -5,17 +5,38 @@ pages:
     hide: true
     template:
         - subcategory
+        - product
 
 files:
     sortable: true
     type: image
 
+options:
+    template: false
+
 fields:
-    subcategories:
-        label: Subcategories
+    products_tab:
+        label: Products
+        type: tabs
+        icon: shopping-bag
+    products:
         type: subpagelist
+        filter:
+            template: product
+    subcategories_tab:
+        label: Subcategories
+        icon: tags
+        type: tabs
+    subcategories:
+        type: subpagelist
+        filter:
+            template: subcategory
+    settings_tab:
+        label: Settings
+        type: tabs
+        icon: cog
     title:
-        label: Category title
+        label: Category Title
         type: text
     featured_image:
         label: Featured Image

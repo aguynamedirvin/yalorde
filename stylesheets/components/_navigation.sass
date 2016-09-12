@@ -6,6 +6,9 @@
     li
         display: inline-block
 
+        a:hover
+            color: $color-primary
+
 
 /** Page navigation **/
 .page-nav
@@ -35,14 +38,14 @@
         &:hover,
         &:active
             transform: scale(1.1)
-
+            color: $color-primary
             border-color: $color-primary
 
 
 /** Breadcrumbs **/
 .breadcrumbs
     text-transform: capitalize
-    font-size: 1.6rem
+    font-size: 1.3rem
 
     li
         &:after
@@ -54,10 +57,10 @@
 
         &:last-of-type:after
             content: ''
+            display: none
 
     a
         color: $color-grey
 
-        &:hover,
         &.current
             color: $color-mine-shaft

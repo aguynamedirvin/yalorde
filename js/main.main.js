@@ -43,15 +43,15 @@ var searchResults   = $('.search__results');
 
 input.on('keyup', function(e) {
     // I check if the length in the input is more than 3 characters
-    if (input.val().length > 3) {
+    if (input.val().length >= 3) {
 
         $.ajax({
             // build the url
-            url: document.location.origin + '/dist/search/' + encodeURIComponent(input.val()),
+            url: document.location.origin + '/yalorde/dist/search/' + encodeURIComponent(input.val()),
             context: searchResults
         }).done(function(data) {
 
-            console.log('Url: ' + document.location.origin + "/dist/search/" + encodeURIComponent(input.val()) + "");
+            console.log('Url: ' + document.location.origin + "/yalorde/dist/search/" + encodeURIComponent(input.val()) + "");
 
             // convert the data to objects, console.log this to see
             // how the object is build and which keys you can use
@@ -66,7 +66,7 @@ input.on('keyup', function(e) {
                 // Display the container
                 searchResults.css('display', 'block');
 
-                var string = '<li><a href="' + object.url + '">' + object.content.title + '</a></li>';
+                var string = '<li><a href="' + object.url + '">' + object.content.title.substring(0, 35) + '...</a></li>';
 
                 // Append the results to the container
                 searchResults.append(string);

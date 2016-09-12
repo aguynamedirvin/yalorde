@@ -133,7 +133,7 @@ module.exports = function (grunt) {
 
                     // Template separates
                     {
-                        '<%= dirs.dist.js %>/templates/product.js': ['<%= dirs.src.js %>/sliders.template.js', '<%= dirs.src.js %>/slickslider.template.js'],
+                        '<%= dirs.dist.js %>/templates/product.js': ['<%= dirs.src.js %>/sliders.template.js', '<%= dirs.src.js %>/slickslider.template.js', '<%= dirs.src.js %>/openshare.template.js'],
                     },
 
                     // Main

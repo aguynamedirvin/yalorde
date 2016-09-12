@@ -7,7 +7,12 @@ pages:
         - category
 
 files: false
-deletable: false
+
+options:
+    status: false
+    template: false
+    url: false
+    delete: false
 
 fields:
     categories:

@@ -15,10 +15,12 @@
                 </a>
             </figure>
             <div class="product__meta">
-                <h3 class="product__title" property="name"><a href="<?= $product->url() ?>"><?= $product->title()->excerpt(25) ?></a></h3>
+                <h3 class="product__title" property="name"><a href="<?= $product->url() ?>"><?= $product->title()->excerpt(40) ?></a></h3>
+                <?php if ( $product->price()->isNotEmpty() ): ?>
                 <div class="product__price">
                     <?= formatPrice( $product->price(), $product->saleprice() ) ?>
                 </div>
+                <?php endif ?>
             </div>
         </div>
     <?php endforeach ?>

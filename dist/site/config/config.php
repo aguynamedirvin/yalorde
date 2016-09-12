@@ -108,7 +108,7 @@ function makeVisible($page) {
 }
 
 // Shrink large images on upload
-kirby()->hook('panel.file.upload', 'shrinkImage');
+/*kirby()->hook('panel.file.upload', 'shrinkImage');
 kirby()->hook('panel.file.replace', 'shrinkImage');
 function shrinkImage($file, $maxDimension = 1000) {
     try {
@@ -118,7 +118,7 @@ function shrinkImage($file, $maxDimension = 1000) {
             $originalPath = $file->dir() . '/' . $file->filename();
 
             // Create a thumb and get its path
-            $resized = $file->resize($maxDimension, $maxDimension);
+            $resized = $file->resize($maxDimension);
             $resizedPath = $resized->dir() . '/' . $resized->filename();
 
             // Replace the original file with the resized one
@@ -129,7 +129,7 @@ function shrinkImage($file, $maxDimension = 1000) {
     } catch(Exception $e) {
         return response::error($e->getMessage());
     }
-}
+}*/
 
 
 /*
@@ -148,7 +148,7 @@ c::set('routes', array(
         'action'    => function ($uri) {
 
             $query   = urldecode($uri);
-            $results = page('shop')->index()->visible()->filterBy('template', 'product')->search($query, 'title|sku|tags')->limit(5)->toJson();
+            $results = page('shop')->index()->visible()->filterBy('template', 'product')->search($query, 'title|sku|tags|color|category')->limit(5)->toJson();
 
             return response::json(array(
                 $results

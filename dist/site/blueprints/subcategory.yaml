@@ -1,22 +1,22 @@
-title: Product subcategory
+title: Subcategory
 
 icon: folder
+icon: tag
 pages:
     hide: true
     template:
         - product
+options:
+    template: false
 
 files: false
 
 fields:
     title:
-        label: Subcategory title
+        label: Subcategory Title
         type: text
-    products:
-        label: Products
-        type: subpagelist
     text:
-        label: Category description
+        label: Subcategory Description
         type: textarea
         buttons: false
     tags:

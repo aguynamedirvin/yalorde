@@ -16,7 +16,7 @@ return function($site, $pages, $page) {
     // Filter by search query
     $query = get('search');
     if ( $query ) {
-        $products = $products->search($query, 'title|sku|tags');
+        $products = $products->search($query, 'title|sku|tags|colors');
     }
 
     // Add pagination

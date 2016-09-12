@@ -4,17 +4,19 @@
 
         <article class="product  product-single" itemscope itemtype="http://schema.org/Product">
 
+            <?= snippet('breadcrumb') ?>
+
             <figure class="product__images">
                 <?php if ( $product->hasImages() ): ?>
                     <div class="slider  product__slider">
                         <?php foreach ( $product->images() as $image ): ?>
-                            <img src="<?= thumb($image, ['width' => 430, 'height' => 625])->url() ?>">
+                            <img src="<?= thumb($image, ['width' => 430, 'crop' => false, 'quality' => 100])->url() ?>">
                         <?php endforeach ?>
                     </div>
 
                     <div class="product__thumbnails">
                         <?php foreach ( $product->images() as $image ): ?>
-                            <img src="<?= thumb($image, ['width' =>  150, 'height' => 210])->url() ?>">
+                            <img src="<?= thumb($image, ['width' =>  120, 'height' => 180])->url() ?>">
                         <?php endforeach ?>
                     </div>
                 <?php else: ?>
@@ -26,22 +28,65 @@
             <div class="product__details">
                 <header class="product__section">
 
-                    <?= snippet('breadcrumb') ?>
-
                     <h1 class="product__title" itemprop="name"><?= $product->title()->html() ?></h1>
 
+                    <?php if ( $product->price()->isNotEmpty() ): ?>
                     <div class="product__price" itemscope itemtype="http://schema.org/Offer">
                         <?= formatPrice( $product->price(), $product->saleprice() ) ?>
                     </div>
+                    <?php endif ?>
+
+                    <?php if ( $product->description()->isNotEmpty() ): ?>
+                    <p class="product__description"><?= $product->description()->html() ?></p>
+                    <?php endif ?>
+
                 </header>
 
                 <div class="product__section  product__social-share">
                     <h3><?= l::get('share-with-friends') ?></h3>
                     <ul class="social-icons  social-icons--color">
-                        <li><a href="#"><i class="fa  fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa  fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa  fa-pinterest"></i></a></li>
-                        <li><a href="#"><i class="fa  fa-google-plus"></i></a></li>
+                        <!-- Facebook -->
+                        <li>
+                            <a  data-open-share="facebook"
+                                data-open-share-link="<?= $product->url() ?>"
+                                data-open-share-picture="<?= $product->image()->url() ?>"
+                                data-open-share-caption="<?= $product->title()->html() ?>"
+                                data-open-share-description="<?= $product->description()->html() ?>" target="_blank">
+
+                                <i class="fa  fa-facebook"></i>
+                            </a>
+                        </li>
+
+                        <!-- Twitter -->
+                        <li>
+                            <a  data-open-share="twitter"
+                                data-open-share-url="<?= $product->url() ?>"
+                                data-open-share-text="<?= $product->title()->html() ?>"
+                                data-open-share-hashtags="yalordeboutique" target="_blank">
+
+                                <i class="fa  fa-twitter"></i>
+                            </a>
+                        </li>
+
+                        <!-- Google Plus -->
+                        <li>
+                            <a  data-open-share="google"
+                                data-open-share-url="<?= $product->url() ?>" target="_blank">
+
+                                <i class="fa  fa-google-plus"></i>
+                            </a>
+                        </li>
+
+                        <!-- Pinterest -->
+                        <li>
+                            <a  data-open-share="pinterest"
+                                data-open-share-url="<?= $product->url() ?>"
+                                data-open-share-media="<?= $product->image()->url() ?>"
+                                data-open-share-description="<?= $product->title()->html() ?>" target="_blank">
+
+                                <i class="fa  fa-pinterest"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -50,7 +95,7 @@
                     <p><a href="tel:+1<?= formatPhone(page('contact')->phone()) ?>"><?= l::get('call-us') . ' ' . page('contact')->phone()->html() ?></a></p>
                 </div>
 
-                <?php if ( $product->bulkdiscount()->isTrue() ): ?>
+                <?php if ( $product->bulkdiscount()->isTrue() && $product->price()->isNotEmpty ): ?>
                 <div class="product__section  product__pricing">
                     <h3><?= l::get('more-than-one') ?></h3>
                     <table class="price-table">
@@ -93,10 +138,10 @@
                 <?php endif ?>
 
                 <div class="product__section  product__info">
-                    <h3>Info</h3>
+                    <h3><?= l::get('info') ?></h3>
                     <ul>
-                        <?php if ( $product->style()->isNotEmpty() ): ?>
-                        <li><?= l::get('style') ?>: <?= $product->style()->html() ?></li>
+                        <?php if ( $product->sku()->isNotEmpty() ): ?>
+                        <li><?= l::get('style') ?>: <?= $product->sku()->html() ?></li>
                         <?php endif ?>
 
                         <?php if ( $tags ): ?>

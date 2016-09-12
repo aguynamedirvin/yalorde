@@ -20,13 +20,17 @@
         a
             color: $color-mine-shaft
 
-        &:hover
-            color: $color-primary
+            &:hover
+                color: $color-primary
 
 
 // Single product page
 .product-single
     @extend %clearfix
+    margin-bottom: $spacing * 6
+
+    .breadcrumbs
+        margin: 2rem
 
     .product
 
@@ -34,18 +38,21 @@
         &__images
             margin: 0
             overflow: hidden
-
+            max-height: 600px
 
             @include mq($break-medium)
-                @include col(6.5/12)
+                @include col(6/12)
+
+            img
+                border: 1px dotted $color-alto
 
         &__slider
             @include mq($break-big)
-                @include col(8.8/12)
+                @include col(9.5/12)
 
         &__thumbnails
             @include mq($break-big)
-                @include col(3.2/12)
+                @include col(2.5/12)
 
             img
                 outline: none
@@ -62,12 +69,16 @@
         // Product details
         &__details
             @include mq($break-medium)
-                @include col(4.5/12)
+                @include col(5/12)
+
+
+        &__description
+            color: $color-grey
 
 
         // Sections
         &__section
-            margin-bottom: $spacing * 3
+            margin-bottom: $spacing * 4
 
             h3
                 font-size: 1.6rem
@@ -75,8 +86,7 @@
         // Product title & price
         &__title
             margin: ($spacing / 2) 0
-
-            font-size: 4.5rem
+            font-size: 2.5rem
 
         &__price
             font-size: 3.7rem
@@ -101,7 +111,8 @@
 
         // Anticipation message
         &__anticipation
-            color: $color-apple-blossom
+            font-size: 1.4rem
+            color: rgba($color-apple-blossom, .7)
 
     // Pice table
     .price-table

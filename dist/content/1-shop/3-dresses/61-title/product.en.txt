@@ -1,0 +1,37 @@
+Title: title
+
+----
+
+Sku: style
+
+----
+
+Price: 
+
+----
+
+Saleprice: 
+
+----
+
+Bulkdiscount: 0
+
+----
+
+Sizes: size
+
+----
+
+Colors: color
+
+----
+
+Category: category
+
+----
+
+Featured-image: 
+
+----
+
+Description: description

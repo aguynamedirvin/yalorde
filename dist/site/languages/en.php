@@ -38,11 +38,12 @@
 'more-than-one' => 'More than one?',
 'order-by-phone'=> 'Order by phone',
 
+'info'          => 'Info',
 'style'         => 'Style',
 'categories'    => 'Categories',
 'tags'          => 'Tags',
 
-'anticipation'  => '*Please allow a 3 month anticipation to ensure we have it in stock.',
+'anticipation'  => '* Please allow a 3 month anticipation to ensure we have it in stock.',
 
 'qty'           => 'Qty.',
 'total'         => 'Total',
