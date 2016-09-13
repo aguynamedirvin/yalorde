@@ -15,9 +15,16 @@ options:
     delete: false
 
 fields:
-    categories:
+    categories_tab:
         label: Categories
+        type: tabs
+        icon: tags
+    categories:
         type: subpagelist
+    settings_tab:
+        label: Settings
+        type: tabs
+        icon: gear
     top_categories:
         label: Featured categories
         type: multiselect

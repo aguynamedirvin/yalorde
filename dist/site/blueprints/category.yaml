@@ -4,8 +4,8 @@ icon: folder
 pages:
     hide: true
     template:
-        - subcategory
         - product
+        - subcategory
 
 files:
     sortable: true
