@@ -3,43 +3,27 @@
  ------------------------------------*/
 
 .nav
-    li
-        display: inline-block
+    @extend .list--inline
 
-        a:hover
-            color: $color-primary
+    a:hover
+        color: $color-primary
 
 
 /** Page navigation **/
 .page-nav
-    @extend .nav
+    @extend .list--inline
+    @extend .list--round
+
     text-align: center
 
-    $nav: 42px
-
-    a
-        position: relative
-        display: block
-
-        width: $nav
-        height: $nav
-
-        margin-right: $spacing / 2
-
-        transition: all .3s ease-in-out
-        text-align: center
-
-        border: 1px solid $color-grey
-        border-radius: 50%
-
-        font-size: 1.8rem
-        line-height: $nav
-
-        &:hover,
-        &:active
+    li
+        &.current,
+        &:hover
             transform: scale(1.1)
             color: $color-primary
             border-color: $color-primary
+            a
+                color: $color-primary
 
 
 /** Breadcrumbs **/
