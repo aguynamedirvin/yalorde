@@ -1,6 +1,6 @@
     <footer class="site-footer">
         <div class="wrap">
-            
+
             <div class="footer__widget">
                 <h3><?= l::get('contact') ?></h3>
                 <ul>
@@ -13,7 +13,7 @@
                     <li>Email. <a href="mailto: <?= $contact->email()->html() ?>"><?= $contact->email()->html() ?></a></li>
                 </ul>
             </div>
-            
+
             <div class="footer__widget">
                 <h3><?= l::get('follow-us') ?></h3>
 
@@ -25,10 +25,10 @@
                 <ul>
                     <?php
                         $links = $site->footer_links()->split();
-                        
+
                         foreach ( $links as $link ) {
                             $link = $site->index()->findByURI($link);
-                            
+
                             if ( $link ) {
                                 echo '<li><a href="' . $link->url() . '">' . $link->title()->html() . '</a></li>';
                             }
@@ -36,7 +36,7 @@
                     ?>
                 </ul>
             </div>
-            
+
         </div>
     </footer>
 
@@ -91,8 +91,6 @@
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-19072260-24','auto');ga('send','pageview');
 	</script>
-
-
 
     </body>
 </html>

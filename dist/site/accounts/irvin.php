@@ -7,5 +7,4 @@ password: >
 language: en
 role: admin
 history:
-  - shop/dresses/prom
   - shop/dresses

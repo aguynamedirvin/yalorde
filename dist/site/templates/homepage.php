@@ -125,6 +125,38 @@
         </section>
 
 
+        <!-- Quincenera Dresses -->
+        <section class="section">
+            <div class="wrap">
+
+                <div class="section__meta">
+                    <h1 class="section__title">Quinceañera Dresses</h1>
+                </div>
+
+                <div class="product__list">
+                    <?= snippet('product.list', ['products' => $quince]) ?>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Bridesmaid Dresses -->
+        <section class="section">
+            <div class="wrap">
+
+                <div class="section__meta">
+                    <h1 class="section__title">Bridesmaid Dresses</h1>
+                </div>
+
+                <div class="product__list">
+                    <?= snippet('product.list', ['products' => $bridesmaid]) ?>
+                </div>
+
+            </div>
+        </section>
+
+
         <!-- Map -->
         <section class="section">
             <div class="section__meta">

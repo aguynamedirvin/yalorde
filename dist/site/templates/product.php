@@ -42,6 +42,11 @@
 
                 </header>
 
+                <div class="product__section">
+                    <h3><i class="fa  fa-phone"></i><?= l::get('order-by-phone') ?></h3>
+                    <p><a href="tel:+1<?= formatPhone(page('contact')->phone()) ?>"><?= l::get('call-us') . ' ' . page('contact')->phone()->html() ?></a></p>
+                </div>
+
                 <div class="product__section  product__social-share">
                     <h3><?= l::get('share-with-friends') ?></h3>
                     <ul class="social-icons  social-icons--color">
@@ -90,13 +95,19 @@
                     </ul>
                 </div>
 
-                <div class="product__section  product__by-phone">
-                    <h3><?= l::get('order-by-phone') ?></h3>
-                    <p><a href="tel:+1<?= formatPhone(page('contact')->phone()) ?>"><?= l::get('call-us') . ' ' . page('contact')->phone()->html() ?></a></p>
+                <div class="product__section">
+                    <h3><?= l::get('sizes') ?></h3>
+                    <?php if ( $product->sizes() ): ?>
+                        <ul class="list--round">
+                            <?php foreach ( $product->sizes()->split(',') as $size ): ?>
+                                <li><?= $size ?></li>
+                            <?php endforeach ?>
+                        </ul>
+                    <?php endif ?>
                 </div>
 
-                <?php if ( $product->bulkdiscount()->isTrue() && $product->price()->isNotEmpty ): ?>
-                <div class="product__section  product__pricing">
+                <?php if ( $product->bulkdiscount()->isTrue()  &&  $product->price()->isNotEmpty ): ?>
+                <div class="product__section">
                     <h3><?= l::get('more-than-one') ?></h3>
                     <table class="price-table">
                         <tr>
@@ -137,19 +148,11 @@
                 </div> <!-- /. bulk discount -->
                 <?php endif ?>
 
-                <div class="product__section  product__info">
+                <div class="product__section">
                     <h3><?= l::get('info') ?></h3>
                     <ul>
                         <?php if ( $product->sku()->isNotEmpty() ): ?>
                         <li><?= l::get('style') ?>: <?= $product->sku()->html() ?></li>
-                        <?php endif ?>
-
-                        <?php if ( $tags ): ?>
-                        <li><?= l::get('tags') ?>:
-                            <?php foreach ( $tags as $tag ): ?>
-                                <a href="<?= page('shop')->url() . '/tag:' . $tag ?>"><?= $tag ?></a><?= e($tag != end($tags), ',') ?>
-                            <?php endforeach ?>
-                        </li>
                         <?php endif ?>
 
                         <li class="product__anticipation"><?= l::get('anticipation') ?></li>

@@ -42,6 +42,7 @@
 'style'         => 'Estilo',
 'categories'    => 'Categorías',
 'tags'          => 'Etiquetas',
+'sizes'         => 'Tamaños',
 
 'anticipation'  => '* Please allow a 3 month anticipation to ensure we have it in stock.',
 

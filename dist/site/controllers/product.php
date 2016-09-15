@@ -12,10 +12,7 @@ return function($site, $pages, $page) {
     // Related products
     $related = $parent->index()->visible()->filterBy('template', 'product');
     $related = $related->not($page)->shuffle()->limit(4);
-
-    // Fetch the products
-    /*$children = page($parent)->index()->visible()->filterBy('template', 'product');
-    $related = $children->not($page)->shuffle()->limit(4);*/
+    
 
     // Pass variables
     return compact('product', 'related');

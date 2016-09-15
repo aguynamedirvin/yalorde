@@ -5,7 +5,8 @@ return function($site, $pages, $page) {
     $category = $page;
 
     // Fetch the products
-    $products = $category->index()->visible()->filterBy('template', 'product');
+    $parent = $category->parent();
+    $products = $parent->index()->visible()->filterBy('template', 'product')->filterBy('category', $page->uid(), ',');
 
     // Get total prodict result count
     $product_count = $products->count();

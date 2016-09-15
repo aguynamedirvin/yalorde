@@ -42,6 +42,7 @@
 'style'         => 'Style',
 'categories'    => 'Categories',
 'tags'          => 'Tags',
+'sizes'         => 'Sizes',
 
 'anticipation'  => '* Please allow a 3 month anticipation to ensure we have it in stock.',
 

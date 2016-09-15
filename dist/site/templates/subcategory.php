@@ -9,17 +9,13 @@
 
     <main class="wrap  shop">
 
-
         Showing <?= $products->count() ?> of <?= $product_count ?> results
-
 
         <div class="product__list">
             <?= snippet('product.list', ['products' => $products]) ?>
         </div>
 
-
         <?= snippet('pagination', ['pagination' => $pagination]) ?>
-
 
     </main>
 

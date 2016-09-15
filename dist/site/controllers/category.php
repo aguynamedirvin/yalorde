@@ -5,29 +5,30 @@ return function($site, $pages, $page) {
     $category = $page;
 
     // Fetch the products
-    $products = $category->index()->visible()->filterBy('template', 'product')->visible();
+    $products = $category->index()->visible()->filterBy('template', 'product');
 
     // Get the subcategories
-    $subcategories = $category->children()->filterBy('template', 'subcategory')->visible();
+    $subcategories = $category->children()->filterBy('template', 'subcategory');
 
     // Get featured image
     if ( $category->featured_image()->isNotEmpty() ) {
         // Get featured image
-        $image = $category->featured_image();
-        $image = $category->files()->find($image);
+        $image = $category->featured_image()->files()->find($image);
 
         // Create the image
-        $header_bg = thumb($image, ['width' => 1200, 'height' => 200, 'crop' => true, 'upscale' => true, 'blur' => true, 'quality' => 80]);
+        $header_bg = thumb($image, ['width' => 1300, 'height' => 200, 'crop' => true, 'upscale' => true, 'blur' => true]);
     }
 
     // Filter by category
     $filterCat = get('filterCategory');
     if ( $filterCat != '' ) {
         // Replace spaces with dashes
-        $filterCat = str_replace(' ', '-', $filterCat);
+        /*$filterCat = str_replace(' ', '-', $filterCat);
         $filterCat = strtolower($filterCat);
 
-        $products = $products->filterBy('category', $filterCat, ',');
+        $products = $products->filterBy('category', $filterCat, ',');*/
+
+        go(page($filterCat));
     }
 
     // Filter by color
@@ -37,9 +38,9 @@ return function($site, $pages, $page) {
     }
 
     // Add pagination
-    $products = $products->paginate(16);
+    $products = $products->paginate(32);
     $pagination = $products->pagination();
 
-    return compact('category', 'products', 'subcategories', 'pagination', 'header_bg', 'filterCat', 'filterColor');
 
+    return compact('category', 'products', 'subcategories', 'pagination', 'header_bg', 'filterCat', 'filterColor');
 };

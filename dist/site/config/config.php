@@ -156,71 +156,19 @@ c::set('routes', array(
         }
     ),
     /**
-     * Remove 'shop' from the url
+     * Use the same template ('category') for subcategories
      */
     /*array(
-        'pattern' => array('(:any)', '(:any)/(:any)'),
-        'action'  => function($uid) {
-            $page = page($uid);
+        'pattern'   => 'shop/(:any)/(:any)',
+        'action'    => function($cat, $subcat) {
 
-            if(!$page) $page = page('shop/' . $uid);
-            if(!$page) $page = site()->errorPage();
+            $page = 'shop/' . $cat;
 
-            return site()->visit($page);
-        }
-    ),
-    array(
-        'pattern' => 'shop/(:all)',
-        'action'  => function($uid) {
-            go($uid);
+            $data = array(
+                'subcategory' => $subcat
+            );
+
+            return array($page, $data);
         }
     ),*/
-    /**
-     * Change shop category & subcategory urls
-     */
-    /*array(
-        'pattern' => 'category/(:all)',
-        'action'  => function($uid) {
-            $page = page('shop')->children()->index()->findByURI($uid);
-
-            // Check page exists
-            if(!$page) $page = site()->errorPage();
-
-            return site()->visit($page->uri());
-        }
-    ),
-    array(
-        'pattern' => 'shop/(:any)/(:any)',
-        'action'  => function($category, $subcategory) {
-            go('category/' . $category . '/' . $subcategory);
-        }
-    ),
-    array(
-        'pattern' => 'shop/(:any)',
-        'action'  => function($category) {
-            go('category/' . $category);
-        }
-    ),
-
-    /**
-     * Change product url
-     * 'shop/(category)/(subcategory)/(product)' -> 'product/(product)'
-     */
-    /*array(
-        'pattern' => 'product/(:any)',
-        'action'  => function($uid) {
-            $page = page('shop')->children()->index()->findByURI($uid);
-
-            // Check page exists
-            if(!$page) $page = site()->errorPage();
-
-            return site()->visit($page->uri());
-        }
-    ),
-    array(
-        'pattern' => 'shop/(:any)/(:any)/(:any)',
-        'action'  => function($category, $subcategory, $uid) {
-            go('product/' . $uid);
-        }
-    )*/
 ));
