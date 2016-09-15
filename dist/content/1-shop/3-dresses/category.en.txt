@@ -1,0 +1,33 @@
+Products-tab: 
+
+----
+
+Products: 
+
+----
+
+Subcategories-tab: 
+
+----
+
+Subcategories: 
+
+----
+
+Settings-tab: 
+
+----
+
+Title: Dresses
+
+----
+
+Featured-image: flowers.jpg
+
+----
+
+Text: 
+
+----
+
+Tags: 
