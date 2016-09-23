@@ -44,9 +44,7 @@
 
     <div class="site-info">
         <div class="wrap">
-            <div class="pull--left">
-                <?= l::get('squarepixl') ?>
-            </div>
+            <div class="pull--left"><?= l::get('squarepixl') ?></div>
             <div class="pull--left@md  pull--right">
                 &copy; <?= date('Y') . ' ' . $site->title()->html() . '. ' . l::get('copyright') ?>.
             </div>

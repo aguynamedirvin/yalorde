@@ -6,8 +6,8 @@
 
 
 // Global
-'contact'       => 'Contact',
-'follow-us'     => 'Follow us',
+'contact'       => 'Stay in touch',
+'follow-us'     => 'We\'re social',
 'quick-links'   => 'Quick links',
 
 'call-us'       => 'Call us',

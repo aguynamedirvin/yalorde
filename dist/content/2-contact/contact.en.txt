@@ -2,13 +2,13 @@ Title: Contact
 
 ----
 
-Work-hours: 
+Work-hours:
 
-- 
+-
   day: Mon – Sat
   open_hours: 10:30
   closing_hours: 19:00
-- 
+-
   day: Sun
   open_hours: 11:00
   closing_hours: 15:00
@@ -31,20 +31,20 @@ Twitter: http://www.twitter.com/Yalorde
 
 ----
 
-Pinterest: 
+Pinterest:
 
 ----
 
-Google-plus: 
+Google-plus:
 
 ----
 
-Location: 
+Location:
 
-address: '103 Joe Battle Blvd #105 El Paso, TX 79938'
+address: '1830 Joe Battle Blvd Ste. 105 El Paso, TX 79936'
 lat: 31.7557228
 lng: -106.266753
 
 ----
 
-Instagram: 
+Instagram:

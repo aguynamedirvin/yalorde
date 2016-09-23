@@ -3,3 +3,4 @@
 .csscomb.json
 /dist/thumbs/*
 /dist/site/cache
+.DS_Store

@@ -13,7 +13,8 @@ return function($site, $pages, $page) {
     // Get featured image
     if ( $category->featured_image()->isNotEmpty() ) {
         // Get featured image
-        $image = $category->featured_image()->files()->find($image);
+        $image = $category->featured_image();
+        $image = $category->files()->find($image);
 
         // Create the image
         $header_bg = thumb($image, ['width' => 1300, 'height' => 200, 'crop' => true, 'upscale' => true, 'blur' => true]);
